@@ -1,0 +1,174 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} schedule {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-9 pt-9 pt-md-1">
+      <div class="container-fluid">
+        <div class="header-body">
+          <div class="empty-box"></div>
+          <h6 class="h2 text-white d-inline-block mb-0">ENERGY CONSUMPTION</h6>
+          <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+              <li class="breadcrumb-item"><a href="#"><i class="fas fa-TEMPERATURE"></i></li>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+          
+              
+                  <h1> <span id="temperature"></span></h1>
+              
+                  <script>
+                      $(document).ready(function() {
+                          $.ajax({
+                              url: '/fetch-temperature/',
+                              dataType: 'json',
+                              success: function(data) {
+                                  $('#temperature').text(data.ENERGY + '°C');
+                              },
+                              error: function() {
+                                  $('#temperature').text('Failed to fetch energy');
+                              }
+                          });
+                      });
+                  </script>
+              <li class="breadcrumb-item active" aria-current="page"></li>
+            </ol>
+          </nav>
+          <!-- Card stats -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+              <h3 class="mb-0">Supportive Devices</h3>
+            </div>
+            <div class="card-body">
+              <div class="row icon-examples">
+                
+                <div class="card-body">
+                  <div class="row icon-examples">
+                    <div class="col-lg-3 col-md-6">
+                      <button type="button" class="btn-icon-clipboard" data-clipboard-text="active-40" title="tab to open">
+                        <div>
+                          <a href="https://www.bing.com/images/search?q=smart+switch&form=HDRSC3&first=1">
+                          <i class="ni ni-active-40"></i>
+                          <span>SMART SWITCH</span>
+                          </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <button type="button" class="btn-icon-clipboard" data-clipboard-text="air-baloon" title="tab to open">
+                        <div>
+                          <a href ="https://www.bing.com/images/search?q=smart%20bulb&qs=n&form=QBIR&sp=-1&ghc=1&lq=0&pq=smart%20bulb&sc=10-10&cvid=37A57B94E02647349A3907F926449EEA&ghsh=0&ghacc=0&first=1">
+                          <i class="ni ni-bulb-61"></i>
+                          <span>SMART BULB</span>
+                        </a>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <button type="button" class="btn-icon-clipboard" data-clipboard-text="album-2" title="tab to open">
+                        <div>
+                          <a href ="priya.html">
+                            <i class="fa fa-bolt" ></i>
+                          <span>ENERGY ESTIMATE</span>
+                          </a>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <button type="button" class="btn-icon-clipboard" data-clipboard-text="align-center" title="tab to open">
+                        <div>
+                          <a href="speaker.html"
+                          <i class="fas fa-volume-up"></i>
+                          <span>SPEAKER</span>
+                        </a>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <button type="button" class="btn-icon-clipboard" data-clipboard-text="align-left-2" title="tab to open">
+                        <div>
+                          <a href="light.html">
+                          <i class="fas fa-lightbulb"></i>
+                          <span>LIGHT SENSOR</span>
+                          </a>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <button type="button" class="btn-icon-clipboard" data-clipboard-text="ambulance" title="tab to open">
+                        <div>
+                          <a href="https://www.bing.com/images/search?q=smart%20fan&qs=n&form=QBIR&sp=-1&lq=0&pq=smart%20fan&sc=10-9&cvid=78CD440D71AE47E7800677C5D9BB00AD&ghsh=0&ghacc=0&first=1">
+                          <i class="fas fa-fan"></i>
+                          <span>SMART FAN</span>
+                          </a>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <button type="button" class="btn-icon-clipboard" data-clipboard-text="app" title="tab to open">
+                        <div>
+                          <a href = "rde.html">
+                            <i class="fas fa-video"></i>
+                          <span>CCTV</span>
+                          </a>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                      <button type="button" class="btn-icon-clipboard" data-clipboard-text="archive-2" title="tab to open ">
+                        <div>
+                          <a href="temp.html">
+                            <i class="fas fa-thermometer-empty"></i>
+                          <span>TEMPERATURE</span>
+                          </a>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                      <button type="button" class="btn-icon-clipboard" data-clipboard-text="atom" title="tab to open">
+                        <div>
+                          <a href="motion.html">
+                            <i class="fas fa-running"></i>
+                          <span>MOTION SENSOR</span>
+                          </a>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                      <button type="button" class="btn-icon-clipboard" data-clipboard-text="badge" title="tab to open">
+                        <div>
+                          <a href="lpg.html">
+                          <i class="fas fa-fire"></i>
+                          <span>LPG SENSOR</span>
+                          </a>
+                        </div>
+                      </button>
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+          
+    {% include "includes/footer.html" %}
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+<script src="/static/assets/vendor/clipboard/dist/clipboard.min.js"></script>
+
+{% endblock javascripts %}

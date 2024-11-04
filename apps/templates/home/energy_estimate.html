@@ -1,0 +1,82 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} ROOMS {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-5">
+      <div class="container-fluid">
+        <div class="header-body">
+          <h6 class="h2 text-white d-inline-block mb-0">ENERGY CONSUMPTION (TODAY)</h6>
+          
+              <nav aria-label="" class="d-none d-md-inline-block ml-md-4">
+                <div id="energyData">
+                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                  <li class=""><a href="#"><i class="fas fa-bolt"></i></li>
+                    <script src="/static/assets/vendor/clipboard/dist/energytoday.js"></script>
+              
+                  
+                      <h1> <span id="energytoday"></span></h1>
+                  
+              
+                  <li class="breadcrumb-item active" aria-current="page"></li>
+                </ol>
+              </div>
+              </nav>
+    
+    <br>
+     
+  
+    <h6 class="h2 text-white d-inline-block mb-0">ENERGY CONSUMPTION (YESTERDAY)</h6>
+              <nav aria-label="" class="d-none d-md-inline-block ml-md-4">
+                <div id="energyData">
+                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                  <li class=""><a href="#"><i class="fas fa-bolt"></i></li>
+                    <script src="/static/assets/vendor/clipboard/dist/energyyesterday.js"></script>
+              
+                  
+                      <h1> <span id="energyyesterday"></span></h1>
+                  
+
+                  <li class="breadcrumb-item active" aria-current="page"></li>
+                </ol>
+              </div>
+              </nav>
+              
+            
+
+             <br>
+             <br>
+             <br>
+
+
+             <h1 class="h2 text-white d-inline-block mb-0">ENERGY HISTORY:</h1>
+             <br>
+             <br>
+                    
+                  
+                    <h6 class="h2 text-white d-inline-block mb-0">
+                      <label for="datePicker">Select Date:</label>
+<input type="date" id="datePicker">
+<button onclick="loadEnergyHistory()">Load History</button>
+<div id="energyHistory">
+</div>
+  </h6>
+</div>
+</div>
+</div>
+  {% include "includes/footer.html" %}
+                              
+    
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+<script src="/static/assets/vendor/clipboard/dist/energy.js"></script>
+
+{% endblock javascripts %}

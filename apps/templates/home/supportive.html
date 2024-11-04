@@ -1,0 +1,142 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Icons {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-9 pt-9 pt-lg-12">
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+              <h3 class="mb-0">Supportive Devices</h3>
+            </div>
+            <div class="card-body">
+              <div class="row icon-examples">
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data--text="active-40" title="Tab to open">
+                    <div>
+                      <i class="ni ni-active-40"></i>
+                      <span>Smart Switch</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data--text="bulb-61" title="Tab to open">
+                    <div>
+                      <i class="ni ni-bulb-61"></i>
+                      <span>Smart Bulb</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-text="tv-2" title="Tab to open">
+                    <div>
+                      <i class="ni ni-tv-2"></i>
+                      <span>Television</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="tv-2" title="Tab to open">
+                    <div>
+                       <i class="fa fa-bolt" ></i>
+                       <span>Energy Estimate</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="tv-2" title="Tab to open">
+                    <div>
+                      <i class="fas fa-thermometer-empty"></i>
+                       <span>Temperature <br> Sensor</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="tv-2" title="Tab to open">
+                    <div>
+                      <i class="fas fa-wind"></i>
+                       <span>Window AC </span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-text="motion" title="Tab to open">
+                    <div>
+                      <i class="fas fa-running"></i>
+                       <span>Motion Sensor </span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-text="lpg" title="Tab to open">
+                    <div>
+                      <i class="fas fa-fire"></i>
+                       <span>Lpg Sensor</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-text="light" title="Tab to open">
+                    <div>
+                      <i class="fas fa-lightbulb"></i>
+                       <span>Light Sensor</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="speaker" title="Tab to open">
+                    <div>
+                      <i class="fas fa-volume-up"></i>
+                       <span>Speaker</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-text="fan" title="Tab to open">
+                    <div>
+                      <i class="fas fa-fan"></i>
+                       <span>Fan </span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-text="setting" title="Tab to open">
+                    <div>
+                      <i class="fas fa-cog"></i>
+                       <span>Settings</span>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+            
+
+
+            
+    {% include "includes/footer.html" %}
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+<script src="/static/assets/vendor/clipboard/dist/clipboard.min.js"></script>
+
+{% endblock javascripts %}

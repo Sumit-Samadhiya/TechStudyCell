@@ -1,0 +1,145 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} ROOMS {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-4">
+      <div class="container-fluid">
+        <div class="header-body">
+          <h6 class="h2 text-white d-inline-block mb-0">DEVICE CONNECTED 1</h6>
+              <nav aria-label="" class="d-none d-md-inline-block ml-md-4">
+                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                  <li class=""><a href="#"><i class="fas fa-TEMPERATURE"></i></li>
+                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+              
+                  
+                      <h1> <span id="temperature"></span></h1>
+                  
+                      <script>
+                          $(document).ready(function() {
+                              $.ajax({
+                                  url: '/fetch-temperature/',
+                                  dataType: 'json',
+                                  success: function(data) {
+                                      $('#temperature').text(data.ENERGY + '°C');
+                                  },
+                                  error: function() {
+                                      $('#temperature').text('Failed to detect device');
+                                  }
+                              });
+                          });
+                      </script>
+                  <li class="breadcrumb-item active" aria-current="page"></li>
+                </ol>
+              </nav>
+    <br>
+    <br>
+
+    <h6 class="h2 text-white align-center d-inline-block mb-0">DEVICE CONNECTED 2</h6>
+              <nav aria-label="" class="d-none d-md-inline-block ml-md-4">
+                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                  <li class=""><a href="#"><i class="fas fa-TEMPERATURE"></i></li>
+                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+              
+                  
+                      <h1> <span id="temperature2"></span></h1>
+                  
+                      <script>
+                          $(document).ready(function() {
+                              $.ajax({
+                                  url: '/fetch-temperature/',
+                                  dataType: 'json',
+                                  success: function(data) {
+                                      $('#temperature2').text(data.ENERGY + '°C');
+                                  },
+                                  error: function() {
+                                      $('#temperature2').text('Failed to detect device');
+                                  }
+                              });
+                          });
+                      </script>
+                  <li class="breadcrumb-item active" aria-current="page"></li>
+                </ol>
+              </nav>
+
+             <br>
+             <br>
+                    
+                  
+                    <h6 class="h2 text-white d-inline-block mb-0" >DEVICE CONNECTED 3</h6>
+                        <nav aria-label="" class="d-none d-md-inline-block ml-md-4">
+                          <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class=""><a href="#"><i class="fas fa-TEMPERATURE"></i></li>
+                              <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                        
+                            
+                                <h1> <span id="temperature3"></span></h1>
+                            
+                                <script>
+                                    $(document).ready(function() {
+                                        $.ajax({
+                                            url: '/fetch-temperature/',
+                                            dataType: 'json',
+                                            success: function(data) {
+                                                $('#temperature3').text(data.ENERGY + '°C');
+                                            },
+                                            error: function() {
+                                                $('#temperature3').text('Failed to detect device');
+                                            }
+                                        });
+                                    });
+                                </script>
+                            <li class="breadcrumb-item active" aria-current="page"></li>
+                          </ol>
+                        </nav>
+                    <br>
+                    <br>
+                        <h6 class="h2 text-white d-inline-block mb-0">DEVICE CONNECTED 4</h6>
+                              <nav aria-label="" class="d-none d-md-inline-block ml-md-4">
+                                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                                  <li class=""><a href="#"><i class="fas fa-TEMPERATURE"></i></li>
+                                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                              
+                                  
+                                      <h1> <span id="temperature4"></span></h1>
+                                  
+                                      <script>
+                                          $(document).ready(function() {
+                                              $.ajax({
+                                                  url: '/fetch-temperature/',
+                                                  dataType: 'json',
+                                                  success: function(data) {
+                                                      $('#temperature4').text(data.ENERGY + '°C');
+                                                  },
+                                                  error: function() {
+                                                      $('#temperature4').text('Failed to detect device');
+                                                  }
+                                              });
+                                          });
+                                      </script>
+                                  <li class="breadcrumb-item active" aria-current="page"></li>
+                                </ol>
+                              </nav>
+                            </div>
+                          </div>
+                        </div>
+                        
+
+                              {% include "includes/footer.html" %}
+    
+                            </div>
+{% endblock content %}
+
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+<script src="/static/assets/vendor/clipboard/dist/clipboard.min.js"></script>
+
+{% endblock javascripts %}
+

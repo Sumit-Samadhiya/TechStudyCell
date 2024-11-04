@@ -1,0 +1,102 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} SPRAKER {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- Header -->
+    
+    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-4">
+      <div class="container-fluid">
+        <div class="header-body">
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <title>SPEAKER</title>
+              <style>
+                /* Common styles */
+                h1 {
+                  text-align: center;
+                }
+                
+                /* Styles for desktop */
+                @media only screen and (min-width: 768px) {
+                  body {
+                    max-width: 1500px;
+                    margin: 0 auto;
+                  }
+                  
+                  .settings {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+                  }
+                  
+                  .setting-label {
+                    width: 150px;
+                  }
+                  
+                  .setting-control {
+                    width: 300px;
+                  }
+                }
+                
+                /* Styles for mobile */
+                @media only screen and (max-width: 767px) {
+                  .settings {
+                    margin-bottom: 10px;
+                  }
+                  
+                  .setting-label,
+                  .setting-control {
+                    display: block;
+                    width: 100%;
+            
+                  }
+                  
+                  .setting-label {
+                    margin-bottom: 5px;
+                  }
+                }
+              </style>
+            </head>
+            <body>
+                <h1 div class="header bg-gradient-primary pb-8 pt-5 pt-md-3">Speaker</h1>
+              
+              <div class="settings">
+                <label><h6 class="h2 text-white d-inline-block mb-0">VOLUME</h6></label>
+                <input class="setting-control" type="range" id="volume" min="0" max="100">
+              </div>
+              
+              <div class="settings">
+                <label>  <h6 class="h2 text-white d-inline-block mb-0">BASE</h6></label>
+                <input class="setting-control" type="range" id="base" min="0" max="100">
+              </div>
+              <div class="settings">
+                <label>  <h6 class="h2 text-white d-inline-block mb-0">TENDER</h6></label>
+                <input class="setting-control" type="range" id="treble" min="0" max="100">
+              </div>
+              
+            </body>
+            </html>
+            <footer class="py-7">
+            </footer>
+        </div>
+    </div>
+    </div>
+    
+    
+{% include "includes/footer.html" %}
+
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+<script src="/static/assets/vendor/clipboard/dist/clipboard.min.js"></script>
+
+{% endblock javascripts %}

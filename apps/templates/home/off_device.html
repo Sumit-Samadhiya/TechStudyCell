@@ -1,0 +1,1182 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} ROOMS {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- Header -->
+    
+     <!-- Page content -->
+  <div class="container-fluid mt--6">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <!-- Card header -->
+          <div class="card-header border-0">
+            <h3 class="mb-0">Total OFF Devices</h3>
+          </div>
+          <!-- Light table -->
+          <div class="table-responsive">
+            <table class="table align-items-center table-flush">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col" class="sort" data-sort="name">DEVICE</th>
+                  <th scope="col" class="sort" data-sort="budget">LOCATION</th>
+                  <th scope="col" class="sort" data-sort="status">Status</th>
+                  <th scope="col" class="sort" data-sort="completion">ENERGY</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody class="list">
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" <div class="col-auto">
+                        <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+                        <i class="fas fa-fan"></i>
+                        </div>
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">Fan</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="LOCATION">
+                    Store room
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <i class="bg-red"></i>
+                      <span class="status">OFF</span>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="completion mr-2">10%</span>
+                      <div>
+                        <div class="progress">
+                          <div class="progress-bar bg-green" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" <div class="col-auto">
+                        <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+                        <i class="fas fa-lightbulb"></i>
+                        </div>
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">Light 2</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="LOCATION">
+                  Bed room
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <i class="bg-red"></i>
+                      <span class="status">OFF</span>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="completion mr-2">5%</span>
+                      <div>
+                        <div class="progress">
+                          <div class="progress-bar bg-green" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width: 5%;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" <div class="col-auto">
+                        <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+                        <i class="fas fa-lightbulb"></i>
+                        </div>
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">Light 2</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="LOCATION">
+                    Store room
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <i class="bg-red"></i>
+                      <span class="status">OFF</span>
+                    </span>
+                  </td>
+  
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="completion mr-2">5%</span>
+                      <div>
+                        <div class="progress">
+                          <div class="progress-bar bg-green" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width: 5%;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" <div class="col-auto">
+                        <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+                        <i class="fas fa-fan"></i>
+                        </div>
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">Fan</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="LOCATION">
+                    Bed room
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <i class="bg-red"></i>
+                      <span class="status">OFF</span>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="completion mr-2">10%</span>
+                      <div>
+                        <div class="progress">
+                          <div class="progress-bar bg-green" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" <div class="col-auto">
+                        <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+                        <i class="fas fa-fan"></i>
+                        </div>
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">Fan</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="LOCATION">
+                    Dining room
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <i class="bg-red"></i>
+                      <span class="status">OFF</span>
+                    </span>
+                  </td>
+                  
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="completion mr-2">10%</span>
+                      <div>
+                        <div class="progress">
+                          <div class="progress-bar bg-green" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <th scope="row">
+                  <div class="media align-items-center">
+                    <a href="#" <div class="col-auto">
+                      <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+                      <i class="fas fa-lightbulb"></i>
+                      </div>
+                    </a>
+                    <div class="media-body">
+                      <span class="name mb-0 text-sm">Light</span>
+                    </div>
+                  </div>
+                </th>
+                <td class="LOCATION">
+                  Dining room
+                </td>
+                <td>
+                  <span class="badge badge-dot mr-4">
+                    <i class="bg-red"></i>
+                    <span class="status">OFF</span>
+                  </span>
+                </td>
+
+                </td>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <span class="completion mr-2">6%</span>
+                    <div>
+                      <div class="progress">
+                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="6" aria-valuemin="0" aria-valuemax="100" style="width: 6%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td class="text-right">
+                  <div class="dropdown">
+                    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <th scope="row">
+                <div class="media align-items-center">
+                  <a href="#" <div class="col-auto">
+                    <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+                    <i class="fas fa-lightbulb"></i>
+                    </div>
+                  </a>
+                  <div class="media-body">
+                    <span class="name mb-0 text-sm">Light 2</span>
+                  </div>
+                </div>
+              </th>
+              <td class="LOCATION">
+                Dining room
+              </td>
+              <td>
+                <span class="badge badge-dot mr-4">
+                  <i class="bg-red"></i>
+                  <span class="status">OFF</span>
+                </span>
+              </td>
+
+              </td>
+              <td>
+                <div class="d-flex align-items-center">
+                  <span class="completion mr-2">8%</span>
+                  <div>
+                    <div class="progress">
+                      <div class="progress-bar bg-green" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100" style="width: 8%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td class="text-right">
+                <div class="dropdown">
+                  <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <th scope="row">
+              <div class="media align-items-center">
+                <a href="#" <div class="col-auto">
+                  <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+                  <i class="fas fa-lightbulb"></i>
+                  </div>
+                </a>
+                <div class="media-body">
+                  <span class="name mb-0 text-sm">Tube light</span>
+                </div>
+              </div>
+            </th>
+            <td class="LOCATION">
+              Dining room
+            </td>
+            <td>
+              <span class="badge badge-dot mr-4">
+                <i class="bg-red"></i>
+                <span class="status">OFF</span>
+              </span>
+            </td>
+
+            </td>
+            <td>
+              <div class="d-flex align-items-center">
+                <span class="completion mr-2">10%</span>
+                <div>
+                  <div class="progress">
+                    <div class="progress-bar bg-green" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"></div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td class="text-right">
+              <div class="dropdown">
+                <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-ellipsis-v"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <th scope="row">
+            <div class="media align-items-center">
+              <a href="#" <div class="col-auto">
+                <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+                <i class="fas fa-fan"></i>
+                </div>
+              </a>
+              <div class="media-body">
+                <span class="name mb-0 text-sm">Fan</span>
+              </div>
+            </div>
+          </th>
+          <td class="LOCATION">
+            Study room
+          </td>
+          <td>
+            <span class="badge badge-dot mr-4">
+              <i class="bg-red"></i>
+              <span class="status">OFF</span>
+            </span>
+          </td>
+
+          </td>
+          <td>
+            <div class="d-flex align-items-center">
+              <span class="completion mr-2">10%</span>
+              <div>
+                <div class="progress">
+                  <div class="progress-bar bg-green" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"></div>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="text-right">
+            <div class="dropdown">
+              <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-ellipsis-v"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <th scope="row">
+          <div class="media align-items-center">
+            <a href="#" <div class="col-auto">
+              <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+              <i class="fas fa-lightbulb"></i>
+              </div>
+            </a>
+            <div class="media-body">
+              <span class="name mb-0 text-sm">Light</span>
+            </div>
+          </div>
+        </th>
+        <td class="LOCATION">
+          Study room
+        </td>
+        <td>
+          <span class="badge badge-dot mr-4">
+            <i class="bg-red"></i>
+            <span class="status">OFF</span>
+          </span>
+        </td>
+
+        </td>
+        <td>
+          <div class="d-flex align-items-center">
+            <span class="completion mr-2">5%</span>
+            <div>
+              <div class="progress">
+                <div class="progress-bar bg-green" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width: 5%;"></div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td class="text-right">
+          <div class="dropdown">
+            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-ellipsis-v"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <th scope="row">
+        <div class="media align-items-center">
+          <a href="#" <div class="col-auto">
+            <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+            <i class="fas fa-desktop"></i>
+            </div>
+          </a>
+          <div class="media-body">
+            <span class="name mb-0 text-sm">Desktop</span>
+          </div>
+        </div>
+      </th>
+      <td class="LOCATION">
+        Study room
+      </td>
+      <td>
+        <span class="badge badge-dot mr-4">
+          <i class="bg-red"></i>
+          <span class="status">OFF</span>
+        </span>
+      </td>
+
+      </td>
+      <td>
+        <div class="d-flex align-items-center">
+          <span class="completion mr-2">7%</span>
+          <div>
+            <div class="progress">
+              <div class="progress-bar bg-green" role="progressbar" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100" style="width: 7%;"></div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td class="text-right">
+        <div class="dropdown">
+          <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-ellipsis-v"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <th scope="row">
+      <div class="media align-items-center">
+        <a href="#" <div class="col-auto">
+          <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+          <i class="fas fa-print"></i>
+          </div>
+        </a>
+        <div class="media-body">
+          <span class="name mb-0 text-sm">Printer</span>
+        </div>
+      </div>
+    </th>
+    <td class="LOCATION">
+      Study room
+    </td>
+    <td>
+      <span class="badge badge-dot mr-4">
+        <i class="bg-red"></i>
+        <span class="status">OFF</span>
+      </span>
+    </td>
+
+    </td>
+    <td>
+      <div class="d-flex align-items-center">
+        <span class="completion mr-2">12%</span>
+        <div>
+          <div class="progress">
+            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100" style="width: 12%;"></div>
+          </div>
+        </div>
+      </div>
+    </td>
+    <td class="text-right">
+      <div class="dropdown">
+        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-ellipsis-v"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <th scope="row">
+    <div class="media align-items-center">
+      <a href="#" <div class="col-auto">
+        <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+        <i class="fas fa-fan"></i>
+        </div>
+      </a>
+      <div class="media-body">
+        <span class="name mb-0 text-sm">Fan</span>
+      </div>
+    </div>
+  </th>
+  <td class="LOCATION">
+    Kitchen
+  </td>
+  <td>
+    <span class="badge badge-dot mr-4">
+      <i class="bg-red"></i>
+      <span class="status">OFF</span>
+    </span>
+  </td>
+
+  </td>
+  <td>
+    <div class="d-flex align-items-center">
+      <span class="completion mr-2">2%</span>
+      <div>
+        <div class="progress">
+          <div class="progress-bar bg-green" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 2%;"></div>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td class="text-right">
+    <div class="dropdown">
+      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-ellipsis-v"></i>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </div>
+  </td>
+</tr>
+<th scope="row">
+  <div class="media align-items-center">
+    <a href="#" <div class="col-auto">
+      <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+      <i class="fas fa-lightbulb"></i>
+      </div>
+    </a>
+    <div class="media-body">
+      <span class="name mb-0 text-sm">Light</span>
+    </div>
+  </div>
+</th>
+<td class="LOCATION">
+  Kitchen
+</td>
+<td>
+  <span class="badge badge-dot mr-4">
+    <i class="bg-red"></i>
+    <span class="status">OFF</span>
+  </span>
+</td>
+
+</td>
+<td>
+  <div class="d-flex align-items-center">
+    <span class="completion mr-2">6%</span>
+    <div>
+      <div class="progress">
+        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="6" aria-valuemin="0" aria-valuemax="100" style="width: 6%;"></div>
+      </div>
+    </div>
+  </div>
+</td>
+<td class="text-right">
+  <div class="dropdown">
+    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="fas fa-ellipsis-v"></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+</td>
+</tr>
+<th scope="row">
+  <div class="media align-items-center">
+    <a href="#" <div class="col-auto">
+      <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+      <i class="fas fa-fire"></i>
+      </div>
+    </a>
+    <div class="media-body">
+      <span class="name mb-0 text-sm">Micro wave</span>
+    </div>
+  </div>
+</th>
+<td class="LOCATION">
+  Kitchen
+</td>
+<td>
+  <span class="badge badge-dot mr-4">
+    <i class="bg-red"></i>
+    <span class="status">OFF</span>
+  </span>
+</td>
+
+</td>
+<td>
+  <div class="d-flex align-items-center">
+    <span class="completion mr-2">18%</span>
+    <div>
+      <div class="progress">
+        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100" style="width: 18%;"></div>
+      </div>
+    </div>
+  </div>
+</td>
+<td class="text-right">
+  <div class="dropdown">
+    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="fas fa-ellipsis-v"></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+</td>
+</tr>
+<th scope="row">
+  <div class="media align-items-center">
+    <a href="#" <div class="col-auto">
+      <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+      <i class="fas fa-coffee"></i>
+      </div>
+    </a>
+    <div class="media-body">
+      <span class="name mb-0 text-sm">Coffee maker</span>
+    </div>
+  </div>
+</th>
+<td class="LOCATION">
+  Kitchen
+</td>
+<td>
+  <span class="badge badge-dot mr-4">
+    <i class="bg-red"></i>
+    <span class="status">OFF</span>
+  </span>
+</td>
+
+</td>
+<td>
+  <div class="d-flex align-items-center">
+    <span class="completion mr-2">11%</span>
+    <div>
+      <div class="progress">
+        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="11" aria-valuemin="0" aria-valuemax="100" style="width: 11%;"></div>
+      </div>
+    </div>
+  </div>
+</td>
+<td class="text-right">
+  <div class="dropdown">
+    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="fas fa-ellipsis-v"></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+</td>
+</tr>
+<th scope="row">
+  <div class="media align-items-center">
+    <a href="#" <div class="col-auto">
+      <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+      <i class="fas fa-volume-up"></i>
+      </div>
+    </a>
+    <div class="media-body">
+      <span class="name mb-0 text-sm">Speaker</span>
+    </div>
+  </div>
+</th>
+<td class="LOCATION">
+  Hall
+</td>
+<td>
+  <span class="badge badge-dot mr-4">
+    <i class="bg-red"></i>
+    <span class="status">OFF</span>
+  </span>
+</td>
+
+</td>
+<td>
+  <div class="d-flex align-items-center">
+    <span class="completion mr-2">8%</span>
+    <div>
+      <div class="progress">
+        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100" style="width: 8%;"></div>
+      </div>
+    </div>
+  </div>
+</td>
+<td class="text-right">
+  <div class="dropdown">
+    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="fas fa-ellipsis-v"></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+</td>
+</tr>
+<th scope="row">
+  <div class="media align-items-center">
+    <a href="#" <div class="col-auto">
+      <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+      <i class="fas fa-lightbulb"></i>
+      </div>
+    </a>
+    <div class="media-body">
+      <span class="name mb-0 text-sm">Light 2</span>
+    </div>
+  </div>
+</th>
+<td class="LOCATION">
+  Hall
+</td>
+<td>
+  <span class="badge badge-dot mr-4">
+    <i class="bg-red"></i>
+    <span class="status">OFF</span>
+  </span>
+</td>
+
+</td>
+<td>
+  <div class="d-flex align-items-center">
+    <span class="completion mr-2">8%</span>
+    <div>
+      <div class="progress">
+        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100" style="width: 8%;"></div>
+      </div>
+    </div>
+  </div>
+</td>
+<td class="text-right">
+  <div class="dropdown">
+    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="fas fa-ellipsis-v"></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+</td>
+</tr>
+<th scope="row">
+  <div class="media align-items-center">
+    <a href="#" <div class="col-auto">
+      <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+      <i class="fas fa-lightbulb"></i>
+      </div>
+    </a>
+    <div class="media-body">
+      <span class="name mb-0 text-sm">Lamp</span>
+    </div>
+  </div>
+</th>
+<td class="LOCATION">
+  Hall
+</td>
+<td>
+  <span class="badge badge-dot mr-4">
+    <i class="bg-red"></i>
+    <span class="status">OFF</span>
+  </span>
+</td>
+
+</td>
+<td>
+  <div class="d-flex align-items-center">
+    <span class="completion mr-2">8%</span>
+    <div>
+      <div class="progress">
+        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100" style="width: 8%;"></div>
+      </div>
+    </div>
+  </div>
+</td>
+<td class="text-right">
+  <div class="dropdown">
+    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="fas fa-ellipsis-v"></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+</td>
+</tr>
+<th scope="row">
+  <div class="media align-items-center">
+    <a href="#" <div class="col-auto">
+      <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+      <i class="fas fa-fan"></i>
+      </div>
+    </a>
+    <div class="media-body">
+      <span class="name mb-0 text-sm">Fan</span>
+    </div>
+  </div>
+</th>
+<td class="LOCATION">
+  Hall
+</td>
+<td>
+  <span class="badge badge-dot mr-4">
+    <i class="bg-red"></i>
+    <span class="status">OFF</span>
+  </span>
+</td>
+
+</td>
+<td>
+  <div class="d-flex align-items-center">
+    <span class="completion mr-2">15%</span>
+    <div>
+      <div class="progress">
+        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%;"></div>
+      </div>
+    </div>
+  </div>
+</td>
+<td class="text-right">
+  <div class="dropdown">
+    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="fas fa-ellipsis-v"></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+</td>
+</tr>
+<th scope="row">
+  <div class="media align-items-center">
+    <a href="#" <div class="col-auto">
+      <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+      <i class="fas fa-fan"></i>
+      </div>
+    </a>
+    <div class="media-body">
+      <span class="name mb-0 text-sm">Fan</span>
+    </div>
+  </div>
+</th>
+<td class="LOCATION">
+  Living room
+</td>
+<td>
+  <span class="badge badge-dot mr-4">
+    <i class="bg-red"></i>
+    <span class="status">OFF</span>
+  </span>
+</td>
+
+</td>
+<td>
+  <div class="d-flex align-items-center">
+    <span class="completion mr-2">2%</span>
+    <div>
+      <div class="progress">
+        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 2%;"></div>
+      </div>
+    </div>
+  </div>
+</td>
+<td class="text-right">
+  <div class="dropdown">
+    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="fas fa-ellipsis-v"></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+</td>
+</tr>
+</tr>
+<th scope="row">
+  <div class="media align-items-center">
+    <a href="#" <div class="col-auto">
+      <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+      <i class="fas fa-lightbulb"></i>
+      </div>
+    </a>
+    <div class="media-body">
+      <span class="name mb-0 text-sm">Light 2</span>
+    </div>
+  </div>
+</th>
+<td class="LOCATION">
+  Living room
+</td>
+<td>
+  <span class="badge badge-dot mr-4">
+    <i class="bg-red"></i>
+    <span class="status">OFF</span>
+  </span>
+</td>
+
+</td>
+<td>
+  <div class="d-flex align-items-center">
+    <span class="completion mr-2">2%</span>
+    <div>
+      <div class="progress">
+        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 2%;"></div>
+      </div>
+    </div>
+  </div>
+</td>
+<td class="text-right">
+  <div class="dropdown">
+    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="fas fa-ellipsis-v"></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+</td>
+</tr>
+</tr>
+<th scope="row">
+  <div class="media align-items-center">
+    <a href="#" <div class="col-auto">
+      <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+      <i class="fas fa-lightbulb"></i>
+      </div>
+    </a>
+    <div class="media-body">
+      <span class="name mb-0 text-sm">Light 2</span>
+    </div>
+  </div>
+</th>
+<td class="LOCATION">
+  Guest room
+</td>
+<td>
+  <span class="badge badge-dot mr-4">
+    <i class="bg-red"></i>
+    <span class="status">OFF</span>
+  </span>
+</td>
+
+</td>
+<td>
+  <div class="d-flex align-items-center">
+    <span class="completion mr-2">2%</span>
+    <div>
+      <div class="progress">
+        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 2%;"></div>
+      </div>
+    </div>
+  </div>
+</td>
+<td class="text-right">
+  <div class="dropdown">
+    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="fas fa-ellipsis-v"></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+</td>
+</tr>
+<th scope="row">
+  <div class="media align-items-center">
+    <a href="#" <div class="col-auto">
+      <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+      <i class="fas fa-fan"></i>
+      </div>
+    </a>
+    <div class="media-body">
+      <span class="name mb-0 text-sm">Fan</span>
+    </div>
+  </div>
+</th>
+<td class="LOCATION">
+  Guest room
+</td>
+<td>
+  <span class="badge badge-dot mr-4">
+    <i class="bg-red"></i>
+    <span class="status">OFF</span>
+  </span>
+</td>
+
+</td>
+<td>
+  <div class="d-flex align-items-center">
+    <span class="completion mr-2">10%</span>
+    <div>
+      <div class="progress">
+        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"></div>
+      </div>
+    </div>
+  </div>
+</td>
+<td class="text-right">
+  <div class="dropdown">
+    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="fas fa-ellipsis-v"></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+</td>
+</tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Card footer -->
+          <div class="card-footer py-4">
+            <nav aria-label="...">
+              <ul class="pagination justify-content-end mb-0">
+                <li class="page-item disabled">
+                  <a class="page-link" href="#" tabindex="-1">
+                    <i class="fas fa-angle-left"></i>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                </li>
+                <li class="page-item active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">
+                    <i class="fas fa-angle-right"></i>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <
+      {% include "includes/footer.html" %}
+
+    </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+<script src="/static/assets/vendor/clipboard/dist/clipboard.min.js"></script>
+
+{% endblock javascripts %}

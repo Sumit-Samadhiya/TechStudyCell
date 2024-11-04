@@ -1,0 +1,128 @@
+<nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+  <div class="scrollbar-inner">
+    <!-- Brand -->
+    <div class="sidenav-header  align-items-center">
+      <a class="navbar-brand">
+<img src="/static/assets/img/brand/blue.png" alt="Logo" />
+ 	
+
+      </a>
+    </div>
+    <div class="navbar-inner">
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+        <!-- Nav items -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link {% if 'index' in segment %} active {% endif %}" href="/">
+              <i class="ni ni-tv-2 text-primary"></i>
+              <span class="nav-link-text">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if 'icons' in segment %} active {% endif %}" href="/Room.html">
+              <i class="fas fa-door-closed"></i>
+              <span class="nav-link-text">Rooms</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if 'map' in segment %} active {% endif %}" href="/connected.html">
+             <i class="fas fa-wifi"></i> <!-- Connected Device icon -->
+
+              <span class="nav-link-text">connected Device</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if 'profile' in segment %} active {% endif %}" href="/Schedule.html">
+              <i class="fas fa-calendar-alt"></i>
+              <span class="nav-link-text">Schedule</span>
+            </a>
+          </li>
+
+
+	
+<li class="nav-item">
+            <a class="nav-link {% if 'tables' in segment %} active {% endif %}" href="/devices1.html">
+             <i class="fas fa-life-ring"></i> <!-- Supportive Device icon (fa-life-ring) -->
+              <span class="nav-link-text">Spportive Devices</span>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link {% if 'tables' in segment %} active {% endif %}" href="/priya.html">
+              <i class="fas fa-bolt"></i> <!-- Energy Estimate icon -->
+
+              <span class="nav-link-text">Energy Estimate</span>
+            </a>
+          </li>
+          
+
+	<li class="nav-item">
+            <a class="nav-link" href="/setting.html">
+              <i class="fas fa-cog"></i>
+              <span class="nav-link-text">Setting</span>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="/Profile.html">
+              <i class="ni ni-single-02 text-yellow"></i>
+              <span class="nav-link-text">Profile</span>
+            </a>
+          </li>
+	   
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout' %}">
+              <i class="ni ni-user-run text-red"></i>
+              <span class="nav-link-text">Logout</span>
+            </a>
+          </li>            
+        </ul>
+        <!-- Divider -->
+        <hr class="my-3">
+        <!-- Heading -->
+        <h6 class="navbar-heading p-0 text-muted">
+          <span class="docs-normal">Resources</span>
+        </h6>
+        <!-- Navigation -->
+        <ul class="navbar-nav mb-md-3">
+
+        
+           <li class="nav-item">
+            <style>
+              .google-play{
+                color: #4285F4;
+                font-size: 48px;
+              }
+            </style>
+            <a class="nav-link" 
+               target="_blank" 
+               href="https://play.google.com/store/apps/details?id=com.pubg.imobile&hl=en_IN">
+              <i class="fab fa-google-play" style="contant-color:golden"></i>
+              <span class="nav-link-text">SMART HUT Available in Play Store</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" 
+               target="_blank" 
+               href="https://itmuniversity.ac.in/">
+              <!--<i class="ni ni-archive-2"></i> -->
+              <!--<i class="ri-school-line"></i>-->
+              <i class="fas fa-school"></i>
+              <span class="nav-link-text">ITM University</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/premium.html"class="nav-link" target="_blank" >
+              <i class="ni ni-spaceship text-red"></i>
+              <span class="nav-link-text text-red">Premium Subscription</span>
+            </a>
+          </li>
+
+      </div>
+    </div>
+  </div>
+</nav>

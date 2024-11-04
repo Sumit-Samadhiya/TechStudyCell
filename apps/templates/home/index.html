@@ -1,0 +1,412 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Dashboard {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+     <!-- Header -->
+    <div class="header bg-primary pb-6">
+      <div class="container-fluid">
+        <div class="header-body">
+          <div class="row align-items-center py-4">
+            <div class="col-lg-6 col-7">
+              <h6 class="h2 text-white d-inline-block mb-0">Default</h6>
+              <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                  <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                  <li class="breadcrumb-item"><a href="Room.html">Room</a></li>
+    	<li class="breadcrumb-item"><a href="control.html">Control</a></li>
+    
+                </ol>
+              </nav>
+            </div>
+          </div>
+
+
+	 <div class="col-lg-12 col-4 text-right">
+              <a href="add.html" class="btn btn-sm btn-neutral">New</a>
+              <a href="me.html" class="btn btn-sm btn-neutral">Filters</a>
+            </div>
+          </div>
+
+
+  <style>
+    .temperature {
+      font-size: 60px;
+      font-weight: ;
+      color: #000000; /* Adjust the color as desired */
+    }
+  </style>
+</head>
+<body>
+
+	<b> <span class="text-with-space">Home</span> Temperature.</b>
+	<div class="temperature">25°C
+	<div class="icon icon-shape bg-gradient- text-white rounded-circle shadow"> 
+                   <i class="fas fa-cloud cloud-icon"></i>
+	</div>
+	</div>
+</body>
+  
+
+	<!-- Card stats -->
+	 <div class="row">
+            <div class="col-xl-3 col-lg-6">
+<div class="card card-stats">
+	<a href="/all_device.html">
+              <div class="btn btn-sm btn-neutral">
+	<div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Total Device</h5>
+                      <span class="h2 font-weight-bold mb-0">75</span>
+                    </div>
+                   <div class="col-auto">
+                      <div class="icon icon-shape bg-orange text-white rounded-circle shadow">
+                   <i class="fas fa-desktop"></i> <!-- Device icon -->
+
+	</div>
+                      </div>
+   </div>
+	</a>
+                 
+	</div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted text-sm">                  
+                    <span class="text-nowrap">Is Connected in Home</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+	
+            <div class="col-xl-3 col-lg-6">
+	<div class="card card-stats">
+	<a href="/on_device.html">
+              <div class="btn btn-sm btn-neutral">
+	<div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">On Device</h5>
+                      <span class="h2 font-weight-bold mb-0">51
+</span>
+                    </div>
+                   <div class="col-auto">
+                      <div class="icon icon-shape bg-green text-white rounded-circle shadow">
+                     <i class="fas fa-power-off"></i> <!-- Dining Room icon -->
+	</div>
+       	</div>              
+	 </div>
+	</a> 
+	</div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted text-sm">                  
+              <b><span class="text-nowrap">In home</span></b>
+                  </p>
+              	  </div>
+             	 </div>
+            	</div>
+
+
+	  <div class="col-xl-3 col-lg-6">
+	<div class="card card-stats">
+	<a href="/off_device.html">
+              <div class="btn btn-sm btn-neutral">
+	<div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Off Device</h5>
+                      <span class="h2 font-weight-bold mb-0">24</span>
+                    </div>
+                   <div class="col-auto">
+                      <div class="icon icon-shape bg-red text-white rounded-circle shadow">
+                     <i class="fas fa-power-off"></i> <!-- Dining Room icon -->
+	</div>
+       	</div>              
+	 </div>
+	</a> 
+	</div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted text-sm">                  
+              <b><span class="text-nowrap">Is connected in Dine Room</span></b>
+                  </p>
+              	  </div>
+             	 </div>
+            	</div>
+
+            
+ <div class="col-xl-3 col-lg-6">
+	<div class="card card-stats">
+	<a href="/energy_estimate.html">
+              <div class="btn btn-sm btn-neutral">
+	<div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">IN Home</h5>
+                      <span class="h2 font-weight-bold mb-0">10</span>
+                    </div>
+                   <div class="col-auto">
+                      <div class="icon icon-shape bg-danger text-yellow rounded-circle shadow">
+                    <i class="fas fa-bolt"></i>
+
+	</div>
+       	</div>              
+	 </div>
+	</a> 
+	</div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted text-sm">                  
+              <span class="text-nowrap">Total Energy Estimate</b></span>
+                  </p>
+              	  </div>
+             	 </div>
+            	</div>
+</div>
+</div>
+</div>
+   <!-- Page content -->
+    
+           
+            
+      <div class="row">
+        <div class="col-xl-8">
+          <div class="card">
+            <div class="card-header border-0">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h3 class="mb-0">History of Appliances</h3>
+                </div>
+                <div class="col text-right">
+                  <a href="kartik.html" class="btn btn-sm btn-primary">See all</a>
+                </div>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <!-- Projects table -->
+           <table class="table align-items-center table-flush">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">Device name</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      Light 1
+                    </th>
+                    <td>
+                    Bed Room
+                    </td>
+                    <td class="time">
+
+                    </td>
+                    <td>
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      Blender
+                    </th>
+                    <td>
+                      Kitchen
+                    </td>
+                    <td class="time">
+
+                    </td>
+                   
+                          
+                        
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      Printer
+                    </th>
+                    <td>
+                      Study Room
+                    </td>
+                    
+                    <td class="time">
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      Fan 
+                    </th>
+                    <td>
+                    Dining Room
+                    </td>
+                    <td class="time">
+
+                    </td>
+                   
+                  </tr>
+                  <th scope="row">
+                    Ac
+                  </th>
+                  <td>
+                    Hall
+                  </td>
+                  
+                  <td class="time">
+
+                  </td>
+                  
+                  </th>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div class="card">
+            <div class="card-header border-0">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h3 class="mb-0">History Of Sensors</h3>
+                </div>
+                <div class="col text-right">
+                  <a href="hofsen.html" class="btn btn-sm btn-primary">See all</a>
+                </div>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <!-- Projects table -->
+              <table class="table align-items-center table-flush">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">Sensors name</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Last update</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      Light sensor
+                    </th>
+                    <td>
+                      ON
+                    </td>
+                    <td>
+                     Active
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      Motion sensors
+                    </th>
+                    <td>
+                      ON
+                    </td>
+                    <td>
+                      Active
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      Fire sensor
+                    </th>
+                    <td>
+                      ON
+                    </td>
+                    <td>
+                      Active
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      LPG sensor
+                    </th>
+                    <td>
+                      ON
+                    </td>
+                    <td>
+                      Active
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      Temprature sensor
+                    </th>
+                    <td>
+                      ON
+                    </td>
+                    <td>
+                      Active
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% include "includes/footer.html" %}
+
+    </div>
+
+{% endblock content %}
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+<script>
+  var i=0;
+  var cont=document.getElementsByClassName("time")
+  while(i<10){
+    cont[i].innerHTML = "Failed to fetch time from Sinric Pro"
+    i+=1;
+  }
+
+  function fetchTimeFromSinricPro() {
+    const apiKey = '<API_KEY>';
+    const deviceId = '<DEVICE_ID>';
+    const url = `https://api.sinric.pro/v1/devices/${deviceId}/time`;
+  
+    const headers = {
+      'Authorization': `apikey ${apiKey}`,
+      'Content-Type': 'application/json'
+    };
+  
+    return fetch(url, {
+      headers: headers
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch time from Sinric Pro');
+        }
+        return response.json();
+      })
+      .then(data => {
+        const currentTime = data.payload.time;
+        // Display the current time on the website
+        console.log('Current time:', currentTime);
+      })
+      .catch(error => {
+        // Display "Failure" if there's an error fetching the time
+        console.error('Error:', error);
+        console.log('Failure');
+      });
+  }
+  
+  fetchTimeFromSinricPro();
+  
+</script>
+
+  <script src="/static/assets/vendor/chart.js/dist/Chart.min.js"></script>
+  <script src="/static/assets/vendor/chart.js/dist/Chart.extension.js"></script>
+
+{% endblock javascripts %}

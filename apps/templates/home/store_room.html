@@ -1,0 +1,521 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} ROOMS {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-3">
+      <div class="container-fluid">
+        <div class="header-body">
+          <h6 class="h2 text-white d-inline-block mb-0">ENERGY CONSUMPTION</h6>
+              <nav aria-label="" class="d-none d-md-inline-block ml-md-4">
+                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                  <li class=""><a href="#"><i class="fas fa-TEMPERATURE"></i></li>
+                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+              
+                  
+                      <h1> <span id="temperature"></span></h1>
+                  
+                      <script>
+                          $(document).ready(function() {
+                              $.ajax({
+                                  url: '/fetch-temperature/',
+                                  dataType: 'json',
+                                  success: function(data) {
+                                      $('#temperature').text(data.ENERGY + '°C');
+                                  },
+                                  error: function() {
+                                      $('#temperature').text('Failed to fetch energy');
+                                  }
+                              });
+                          });
+                      </script>
+                  <li class="breadcrumb-item active" aria-current="page"></li>
+                </ol>
+              </nav>
+
+          <!-- Card stats -->
+
+
+ <div class="row">
+            <div class="col-xl-3 col-lg-6">
+	<div class="card card-stats">
+	<a href="/store_room.html">
+              <div class="btn btn-sm btn-neutral">
+	<div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Total Device</h5>
+                      <span class="h2 font-weight-bold mb-0">05</span>
+                    </div>
+                   <div class="col-auto">
+                      <div class="icon icon-shape bg-orange text-white rounded-circle shadow">
+                   <i class="fas fa-desktop"></i> <!-- Device icon -->
+
+	</div>
+                      </div>
+   </div>
+	</a>
+                 
+	</div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted text-sm">                  
+                    <b><span class="text-nowrap">In Store Room</span></b>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+	
+           	 <div class="col-xl-3 col-lg-6">
+	<div class="card card-stats">
+	<a href="/storeon.html">
+	<div class="btn btn-sm btn-neutral">
+	<div class="card card-stats mb-4 mb-xl-0">
+	<div class="card-body">
+                  <div class="row">
+	<div class="col">
+	<h5 class="card-title text-uppercase text-muted mb-0">On Device</h5>
+	<span class="h2 font-weight-bold mb-0">03
+	</span>
+                    </div>
+                   <div class="col-auto">
+<div class="icon icon-shape bg-green text-white rounded-circle shadow">
+                     <i class="fas fa-power-off"></i> <!-- Dining Room icon -->
+	</div>
+       	</div>              
+	 </div>
+	</a> 
+	</div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted text-sm">                  
+              <b><span class="text-nowrap">In Store Room</span></b>
+                  </p>
+              	  </div>
+             	 </div>
+            	</div>
+
+
+	  <div class="col-xl-3 col-lg-6">
+	<div class="card card-stats">
+	<a href="/store2off.html">
+              <div class="btn btn-sm btn-neutral">
+	<div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Off Device</h5>
+                      <span class="h2 font-weight-bold mb-0">02</span>
+                    </div>
+                   <div class="col-auto">
+                      <div class="icon icon-shape bg-red text-white rounded-circle shadow">
+                     <i class="fas fa-power-off"></i> <!-- Dining Room icon -->
+	</div>
+       	</div>              
+	 </div>
+	</a> 
+	</div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted text-sm">                  
+              <b><span class="text-nowrap">In Store Room</span></b>
+                  </p>
+              	  </div>
+             	 </div>
+            	</div>
+
+            
+	 <div class="col-xl-3 col-lg-6">
+	<div class="card card-stats">
+	<a href="/energy_estimate.html">
+              <div class="btn btn-sm btn-neutral">
+	<div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">IN Home</h5>
+                      <span class="h2 font-weight-bold mb-0">10</span>
+                    </div>
+                   <div class="col-auto">
+                      <div class="icon icon-shape bg-danger text-yellow rounded-circle shadow">
+                    <i class="fas fa-bolt"></i>
+
+	</div>
+       	</div>              
+	 </div>
+	</a> 
+	</div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted text-sm">                  
+              <b><span class="text-nowrap">Total Energy Estimate</span></b>
+                  </p>
+              	  </div>
+             	 </div>
+            	</div>
+	</div>
+	</div>
+	</div>
+       
+     <!-- Page content -->
+  <div class="container-fluid mt-- 1">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <!-- Card header -->
+          <div class="card-header border-0">
+            <h3 class="mb-0">Store Room Appliances</h3>
+          </div>
+          <!-- Light table -->
+          <div class="table-responsive">
+            <table class="table align-items-center table-flush">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col" class="sort" data-sort="name">DEVICE</th>
+                  <th scope="col" class="sort" data-sort="budget">TIME</th>
+                  <th scope="col" class="sort" data-sort="status">Status</th>
+                  <th scope="col" class="sort" data-sort="completion">ENERGY</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody class="list">
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" <div class="col-auto">
+                        <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+                        <i class="fas fa-fan"></i>
+                        </div>
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">Fan</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME">
+                    7:00
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <i class="bg-red"></i>
+                      <span class="status">OFF</span>
+                    </span>
+                  </td>
+                  <td>
+                    <nav aria-label="" class="d-none d-md-inline-block ml-md-4">
+                      <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                        <li class=""><a href="#"><i class="fas fa-energy"></i></li>
+                          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                    
+                        
+                            <h1> <span id="energy1"></span></h1>
+                        
+                            <script>
+                                $(document).ready(function() {
+                                    $.ajax({
+                                        url: '/fetch-energy/',
+                                        dataType: 'json',
+                                        success: function(data) {
+                                            $('#energy1').text(data.ENERGY + 'kWh');
+                                        },
+                                        error: function() {
+                                            $('#energy1').text('Failed to detect energy');
+                                        }
+                                    });
+                                });
+                            </script>
+                        <li class="breadcrumb-item active" aria-current="page"></li>
+                      </ol>
+                    </nav>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" <div class="col-auto">
+                        <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+                        <i class="fas fa-lightbulb"></i>
+                        </div>
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">Light 1</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME">
+                  8:15
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <i class="bg-success"></i>
+                      <span class="status">ON</span>
+                    </span>
+                  </td>
+                  <td>
+                    <nav aria-label="" class="d-none d-md-inline-block ml-md-4">
+                      <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                        <li class=""><a href="#"><i class="fas fa-energy"></i></li>
+                          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                    
+                        
+                            <h1> <span id="energy2"></span></h1>
+                        
+                            <script>
+                                $(document).ready(function() {
+                                    $.ajax({
+                                        url: '/fetch-energy/',
+                                        dataType: 'json',
+                                        success: function(data) {
+                                            $('#energy2').text(data.ENERGY + 'kWh');
+                                        },
+                                        error: function() {
+                                            $('#energy2').text('Failed to detect energy');
+                                        }
+                                    });
+                                });
+                            </script>
+                        <li class="breadcrumb-item active" aria-current="page"></li>
+                      </ol>
+                    </nav>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" <div class="col-auto">
+                        <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+                        <i class="fas fa-lightbulb"></i>
+                        </div>
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">Light 2</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME">
+                    6:56
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <i class="bg-danger"></i>
+                      <span class="status">OFF</span>
+                    </span>
+                  </td>
+  
+                  </td>
+                  <td>
+                    <nav aria-label="" class="d-none d-md-inline-block ml-md-4">
+                      <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                        <li class=""><a href="#"><i class="fas fa-energy"></i></li>
+                          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                    
+                        
+                            <h1> <span id="energy3"></span></h1>
+                        
+                            <script>
+                                $(document).ready(function() {
+                                    $.ajax({
+                                        url: '/fetch-energy/',
+                                        dataType: 'json',
+                                        success: function(data) {
+                                            $('#energy3').text(data.ENERGY + 'kWh');
+                                        },
+                                        error: function() {
+                                            $('#energy3').text('Failed to detect energy');
+                                        }
+                                    });
+                                });
+                            </script>
+                        <li class="breadcrumb-item active" aria-current="page"></li>
+                      </ol>
+                    </nav>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" <div class="col-auto">
+                        <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+                        <i class="fas fa-camera"></i>
+                        </div>
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">Camera</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME">
+                    4:56
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <i class="bg-info"></i>
+                      <span class="status">ON</span>
+                    </span>
+                  </td>
+                  <td>
+                    <nav aria-label="" class="d-none d-md-inline-block ml-md-4">
+                      <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                        <li class=""><a href="#"><i class="fas fa-energy"></i></li>
+                          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                    
+                        
+                            <h1> <span id="energy4"></span></h1>
+                        
+                            <script>
+                                $(document).ready(function() {
+                                    $.ajax({
+                                        url: '/fetch-energy/',
+                                        dataType: 'json',
+                                        success: function(data) {
+                                            $('#energy4').text(data.ENERGY + 'kWh');
+                                        },
+                                        error: function() {
+                                            $('#energy4').text('Failed to detect energy');
+                                        }
+                                    });
+                                });
+                            </script>
+                        <li class="breadcrumb-item active" aria-current="page"></li>
+                      </ol>
+                    </nav>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" <div class="col-auto">
+                        <div class="icon icon-shape bg-white text-blue rounded-circle shadow" >
+                        <i class="fas fa-plug"></i>
+                        </div>
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">Switch</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME">
+                  8:15
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <i class="bg-success"></i>
+                      <span class="status">ON</span>
+                    </span>
+                  </td>
+                  <td>
+                    <nav aria-label="" class="d-none d-md-inline-block ml-md-4">
+                      <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                        <li class=""><a href="#"><i class="fas fa-energy"></i></li>
+                          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                    
+                        
+                            <h1> <span id="energy5"></span></h1>
+                        
+                            <script>
+                                $(document).ready(function() {
+                                    $.ajax({
+                                        url: '/fetch-energy/',
+                                        dataType: 'json',
+                                        success: function(data) {
+                                            $('#energy5').text(data.ENERGY + 'kWh');
+                                        },
+                                        error: function() {
+                                            $('#energy5').text('Failed to detect energy');
+                                        }
+                                    });
+                                });
+                            </script>
+                        <li class="breadcrumb-item active" aria-current="page"></li>
+                      </ol>
+                    </nav>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                
+                
+              </tbody>
+            </table>
+          </div>
+          <!-- Card footer -->
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      {% include "includes/footer.html" %}
+
+    </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+<script src="/static/assets/vendor/clipboard/dist/clipboard.min.js"></script>
+
+{% endblock javascripts %}

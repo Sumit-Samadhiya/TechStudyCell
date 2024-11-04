@@ -1,0 +1,188 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} ROOMS {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-4">
+      <div class="container-fluid">
+        <div class="header-body"><!DOCTYPE html>
+<html>
+<head>
+  <title>temperature</title>
+  <style>
+    /* Common styles */
+    h1 {
+      text-align: center;
+    }
+    
+    /* Styles for desktop */
+    @media only screen and (min-width: 768px) {
+      body {
+        max-width: 1500px;
+        margin: 0 auto;
+      }
+      
+      .settings {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      
+      .setting-label {
+        width: 150px;
+      }
+      
+      .setting-control {
+        width: 300px;
+      }
+    }
+    
+    /* Styles for mobile */
+    @media only screen and (max-width: 767px) {
+      .settings {
+        margin-bottom: 10px;
+      }
+      
+      .setting-label,
+      .setting-control {
+        display: block;
+        width: 100%;
+
+      }
+      
+      .setting-label {
+        margin-bottom: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>TEMPERATURE</h1>
+  
+  <div class="settings">
+    <label class="setting-label" for="brightness">Temperature</label>
+    <input class="setting-control" type="range" id="brightness" min="0" max="100">
+  </div>
+  
+  <div class="settings">
+    <label class="setting-label" for="notifications">Notifications:</label>
+    <select class="setting-control" id="notifications">
+      <option value="enabled">Enabled</option>
+      <option value="disabled">Disabled</option>
+    </select>
+  </div>
+  
+  <div class="settings">
+    <label class="setting-label" for="language">Language:</label>
+    <select class="setting-control" id="language">
+      <option value="english">English</option>
+      <option value="spanish">Spanish</option>
+      <option value="french">French</option>
+    </select>
+  </div>
+  <div class="col-xl-15">
+    <div class="card">
+      <div class="card-header border-0">
+        <div class="row align-items-center">
+          <div class="col">
+            <h3 class="mb-0">HISTORY</h3>
+          </div>
+          <div class="col text-right">
+            <a href="register.html" class="btn btn-sm btn-primary">See all</a>
+          </div>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <!-- Projects table -->
+        <table class="table align-items-center table-flush">
+          <thead class="thead-light">
+            <tr>
+                <th scope="col">S.no.</th>
+              <th scope="col">SENSE TIME</th>
+              <th scope="col">STATUS</th>
+  
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                1.
+              </th>
+              <td>
+              5:00 PM
+              </td>
+              <td>
+                ACTIVE
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                2.
+              </th>
+              <td>
+              7:45 PM
+              </td>
+              <td>
+                ACTIVE
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                3.
+              </th>
+              <td>
+                6:45 PM
+              </td>
+              <td>
+                ACTIVE
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                4.
+              </th>
+              <td>
+                5:34 PM
+              </td>
+              <td>
+                ACTIVE
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                5.
+              </th>
+              <td>
+                8:34 PM
+              </td>
+              <td>
+                ACTIVE
+                </td>
+            </tr>
+          </tbody>
+        </table>   
+  
+  <!-- Add more settings as needed -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+{% include "includes/footer.html" %}
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+<script src="/static/assets/vendor/clipboard/dist/clipboard.min.js"></script>
+
+{% endblock javascripts %}

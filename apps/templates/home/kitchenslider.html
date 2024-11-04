@@ -1,0 +1,608 @@
+{% extends 'layouts/base.html' %}
+{% block title %} ROOMS {% endblock title %}
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+{% block content %}
+     <!-- Page content -->
+  <div class="container-fluid mt--6">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <!-- Card header -->
+          <div class="card-header border-0">
+            <h3 class="mb-0">Kitchen Controllers:</h3>
+          </div>
+        
+          <!-- Ac table -->
+          <div class="table-responsive">
+            <table class="table align-items-center table-flush">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col" class="sort" data-sort="name">Appliances</th>
+                  <th scope="col" class="sort" data-sort="budget">Location</th>
+                  <th scope="col" class="sort" data-sort="status">Status</th>
+                  <th scope="col" class="sort" data-sort="completion">CONTROLLER</th>
+                  
+                </tr>
+              </thead>
+             
+ 
+                  <!--KITCHEN INDUCTION-->
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" <div class="col-auto">
+                      <div class="icon icon-shape   text-blue rounded-circle shadow">
+                        <i class="fas fa-fire-alt"></i>
+                     </div>
+                     </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">Induction</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME">
+                  Kitchen
+                  </td>
+                  <td>
+                     <style>
+                      .toggle-switch {
+                        position: relative;
+                        display: inline-block;
+                        width: 60px;
+                        height: 34px;
+                        border-radius:50px;
+                      }
+                      
+                      .toggle-switch input[type="toggle"] {
+                        opacity: 0;
+                        width: 0;
+                        height: 0;
+                        border-radius:50px;
+                      }
+                      
+                      .slider {
+                        position: absolute;
+                        cursor: pointer;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-color: #ccc;
+                        border-radius:50px;
+                        -webkit-transition: .4s;
+                        transition: .4s;
+                        
+                      }
+                      
+                      .slider:before {
+                        position: absolute;
+                        content: "";
+                        height: 26px;
+                        width: 26px;
+                        left: 4px;
+                        bottom: 4px;
+                        border-radius:50px;
+                        background-color: white;
+                        -webkit-transition: .4s;
+                        transition: .4s;
+  
+                      }
+                      
+                      input[type="checkbox"]:checked + .slider {
+                        background-color: #2196F3;
+                      }
+                      
+                      input[type="checkbox"]:checked + .slider:before {
+                        transform: translateX(26px);
+                      }
+                      </style>
+                      <label class="toggle-switch">
+                        <input type="checkbox" class="slider" id="toggle">
+                        <span class="slider" id="toggle"></span>
+                      </label>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="completion mr-2"></span>
+                      <div>
+                        <div>
+                          
+                          <input type="range" min="100" max="1000" value="0"
+                          style="width: 140px; height: 5px; background: #d3d3d3; opacity: 0.7; cursor:-webkit-grab; margin: 0 5px;" oninput="range5.innerText = this.value"
+                          ><p id="range5">100</p>
+    
+                        <div style="display: flex; align-items: center;">
+                                    
+                         </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+               
+                  
+                
+                  {% comment %} Juicer {% endcomment %}
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" <div class="col-auto">
+                        <div class="icon icon-shape   text-blue rounded-circle shadow">
+                          <i class="fa fa-lemon"></i>
+                     </div>
+                     </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">Juicer</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME">
+                    Kitchen
+                  </td>
+                  <td>
+                    
+                      <label class="toggle-switch">
+                        <input type="checkbox" class="slider" id="toggle">
+                        <span class="slider" id="toggle"></span>
+                      </label>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="completion mr-2">Not Supported</span>
+                      <div>
+                        
+                          </div>
+                                                  
+                         </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+               
+                
+                  {% comment %} Refrigerator {% endcomment %}
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" <div class="col-auto">
+                        <div class="icon icon-shape   text-blue rounded-circle shadow">
+                          <i class="fa fa-box-open"></i>
+                     </div>
+                     </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">Refrigerator</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME">
+                    Kitchen
+                  </td>
+                  <td>
+                    
+                      <label class="toggle-switch">
+                        <input type="checkbox" class="slider" id="toggle">
+                        <span class="slider" id="toggle"></span>
+                      </label>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="completion mr-2"></span>
+                      <div>
+                        <div>
+                          
+                          <input type="range" min="0" max="40" value="0"
+                          style="width: 140px; height: 5px; background: #d3d3d3; opacity: 0.7; cursor:-webkit-grab; margin: 0 5px;" oninput="range6.innerText = this.value"
+                          ><p id="range6">0</p>
+    
+                        <div style="display: flex; align-items: center;">
+                      
+                          </div>
+                                                  
+                         </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                {% comment %} Light  {% endcomment %}
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" <div class="col-auto">
+                        <div class="icon icon-shape   text-blue rounded-circle shadow">
+                          <i class="fa fa-lightbulb"></i>
+                     </div>
+                     </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">Light</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME">
+                    Kitchen
+                  </td>
+                  <td>
+                    
+                      <label class="toggle-switch">
+                        <input type="checkbox" class="slider" id="toggle">
+                        <span class="slider" id="toggle"></span>
+                      </label>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="completion mr-2">Not Supported</span>
+                      <div>
+                        
+                          </div>
+                                                  
+                         </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+               
+                 {% comment %} Light 2 {% endcomment %}
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" <div class="col-auto">
+                        <div class="icon icon-shape   text-blue rounded-circle shadow">
+                          <i class="fa fa-lightbulb"></i>
+                     </div>
+                     </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">Light2</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME">
+                    Kitchen
+                  </td>
+                  <td>
+                    
+                      <label class="toggle-switch">
+                        <input type="checkbox" class="slider" id="toggle">
+                        <span class="slider" id="toggle"></span>
+                      </label>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="completion mr-2">Not Supported</span>
+                      <div>
+                         <div class="d-flex align-items-center">
+                            
+                          </div>
+                                                  
+                         </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                {% comment %} FAN  {% endcomment %}
+                
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" <div class="col-auto">
+                        <div class="icon icon-shape   text-blue rounded-circle shadow">
+                          <i class="fa fa-fan"></i>
+                     </div>
+                     </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">Fan</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME">
+                    Kitchen
+                  </td>
+                  <td>
+                    
+                      <label class="toggle-switch">
+                        <input type="checkbox" class="slider" id="toggle">
+                        <span class="slider" id="toggle"></span>
+                      </label>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="completion mr-2"></span>
+                      <div>
+                        <div>
+                          
+                          <input type="range" min="1" max="5" value="0"
+                          style="width: 140px; height: 5px; background: #d3d3d3; opacity: 0.7; cursor:-webkit-grab; margin: 0 5px;" oninput="range7.innerText = this.value"
+                          ><p id="range7">1</p>
+    
+                        <div style="display: flex; align-items: center;">
+                      
+                          </div>
+                                                  
+                         </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                {% comment %} SWITCH {% endcomment %}
+                
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" <div class="col-auto">
+                        <div class="icon icon-shape   text-blue rounded-circle shadow">
+                          <i class="fa fa-toggle-off"></i>
+                     </div>
+                     </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">Switch</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME">
+                    Kitchen
+                  </td>
+                  <td>
+                    
+                      <label class="toggle-switch">
+                        <input type="checkbox" class="slider" id="toggle">
+                        <span class="slider" id="toggle"></span>
+                      </label>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="completion mr-2">Not Supported</span>
+                      <div>
+                         <div class="d-flex align-items-center">
+                            
+                          </div>
+                                                  
+                         </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                {% comment %}Switch 2 {% endcomment %}
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" <div class="col-auto">
+                        <div class="icon icon-shape   text-blue rounded-circle shadow">
+                          <i class="fa fa-toggle-off"></i>
+                     </div>
+                     </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">Switch 2</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME">
+                    Kitchen
+                  </td>
+                  <td>
+                    
+                      <label class="toggle-switch">
+                        <input type="checkbox" class="slider" id="toggle">
+                        <span class="slider" id="toggle"></span>
+                      </label>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="completion mr-2">Not Supported</span>
+                      <div>
+                        <div class="d-flex align-items-center">
+                            
+                          </div>
+                                                  
+                         </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+               
+                {% comment %} Toaster {% endcomment %}
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" <div class="col-auto">
+                        <div class="icon icon-shape   text-blue rounded-circle shadow">
+                          <i class="fa fa-bread-slice"></i>
+                        </div>
+                     </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">Toaster</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME">
+                    Kitchen
+                  </td>
+                  <td>
+                    
+                      <label class="toggle-switch">
+                        <input type="checkbox" class="slider" id="toggle">
+                        <span class="slider" id="toggle"></span>
+                      </label>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="completion mr-2"></span>
+                      <div>
+                        <div>
+                          
+                          <input type="range" min="0" max="100" value="0"
+                          style="width: 140px; height: 5px; background: #d3d3d3; opacity: 0.7; cursor:-webkit-grab; margin: 0 5px;" oninput="range8.innerText = this.value"
+                          ><p id="range8">0</p>
+    
+                        <div style="display: flex; align-items: center;">
+                      
+                          </div>
+                                                  
+                         </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                {% comment %} WATER PURIFY {% endcomment %}
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" <div class="col-auto">
+                        <div class="icon icon-shape   text-blue rounded-circle shadow">
+                          <i class="fa fa-filter"></i>
+                     </div>
+                     </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">Water Purify</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME">
+                    Kitchen
+                  </td>
+                  <td>
+                    
+                      <label class="toggle-switch">
+                        <input type="checkbox" class="slider" id="toggle">
+                        <span class="slider" id="toggle"></span>
+                      </label>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="completion mr-2">Not Supported</span>
+                      <div>
+                       <div class="d-flex align-items-center">
+                            
+                          </div>
+                                                  
+                         </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+</tbody>
+   </table>
+
+  
+        
+      {% include "includes/footer.html" %}
+    </div>
+{% endblock content %}
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+<script src="/static/assets/vendor/clipboard/dist/clipboard.min.js"></script>
+{% endblock javascripts %}

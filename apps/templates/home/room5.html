@@ -1,0 +1,1046 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} ROOMS {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+ <!-- Header -->
+ <div class="header bg-gradient-primary pb-8 pt-5 pt-md-3">
+  <div class="container-fluid">
+    <div class="header-body">
+      <h6 class="h2 text-white d-inline-block mb-0">ENERGY CONSUMPTION</h6>
+          <nav aria-label="" class="d-none d-md-inline-block ml-md-4">
+            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+              <li class=""><a href="#"><i class="fas fa-TEMPERATURE"></i></li>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+          
+              
+                  <h1> <span id="temperature"></span></h1>
+              
+                  <script>
+                      $(document).ready(function() {
+                          $.ajax({
+                              url: '/fetch-temperature/',
+                              dataType: 'json',
+                              success: function(data) {
+                                  $('#temperature').text(data.ENERGY + '°C');
+                              },
+                              error: function() {
+                                  $('#temperature').text('Failed to fetch energy');
+                              }
+                          });
+                      });
+                  </script>
+              <li class="breadcrumb-item active" aria-current="page"></li>
+            </ol>
+          </nav>
+
+      <!-- Card stats -->
+
+
+<div class="row">
+        <div class="col-xl-3 col-lg-6">
+<div class="card card-stats">
+<a href="/bed-room.html">
+          <div class="btn btn-sm btn-neutral">
+<div class="card card-stats mb-4 mb-xl-0">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title text-uppercase text-muted mb-0">Total Device</h5>
+                  <span class="h2 font-weight-bold mb-0">10</span>
+                </div>
+               <div class="col-auto">
+                  <div class="icon icon-shape bg-orange text-white rounded-circle shadow">
+               <i class="fas fa-desktop"></i> <!-- Device icon -->
+
+</div>
+                  </div>
+</div>
+</a>
+             
+</div>
+              </div>
+              <p class="mt-3 mb-0 text-muted text-sm">                  
+                <span class="text-nowrap">Is Connected in Home</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+          <div class="col-xl-3 col-lg-6">
+<div class="card card-stats">
+<a href="/onbeddevice.html">
+<div class="btn btn-sm btn-neutral">
+<div class="card card-stats mb-4 mb-xl-0">
+<div class="card-body">
+              <div class="row">
+<div class="col">
+<h5 class="card-title text-uppercase text-muted mb-0">On Device</h5>
+<span class="h2 font-weight-bold mb-0">08
+</span>
+                </div>
+               <div class="col-auto">
+<div class="icon icon-shape bg-green text-white rounded-circle shadow">
+                 <i class="fas fa-power-off"></i> <!-- Dining Room icon -->
+</div>
+     </div>              
+</div>
+</a> 
+</div>
+              </div>
+              <p class="mt-3 mb-0 text-muted text-sm">                  
+          <b><span class="text-nowrap">In home</span></b>
+              </p>
+              </div>
+            </div>
+          </div>
+
+
+<div class="col-xl-3 col-lg-6">
+<div class="card card-stats">
+<a href="/offbeddevice.html">
+          <div class="btn btn-sm btn-neutral">
+<div class="card card-stats mb-4 mb-xl-0">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title text-uppercase text-muted mb-0">Off Device</h5>
+                  <span class="h2 font-weight-bold mb-0">02</span>
+                </div>
+               <div class="col-auto">
+                  <div class="icon icon-shape bg-red text-white rounded-circle shadow">
+                 <i class="fas fa-power-off"></i> <!-- Dining Room icon -->
+</div>
+     </div>              
+</div>
+</a> 
+</div>
+              </div>
+              <p class="mt-3 mb-0 text-muted text-sm">                  
+          <b><span class="text-nowrap">Is connected in Dine Room</span></b>
+              </p>
+              </div>
+            </div>
+          </div>
+
+        
+<div class="col-xl-3 col-lg-6">
+<div class="card card-stats">
+<a href="/energy_estimate.html">
+          <div class="btn btn-sm btn-neutral">
+<div class="card card-stats mb-4 mb-xl-0">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title text-uppercase text-muted mb-0">IN Home</h5>
+                  <span class="h2 font-weight-bold mb-0">10</span>
+                </div>
+               <div class="col-auto">
+                  <div class="icon icon-shape bg-danger text-yellow rounded-circle shadow">
+                <i class="fas fa-bolt"></i>
+
+</div>
+     </div>              
+</div>
+</a> 
+</div>
+              </div>
+              <p class="mt-3 mb-0 text-muted text-sm">                  
+          <b><span class="text-nowrap">Total Energy Estimate</span></b>
+              </p>
+              </div>
+            </div>
+          </div>
+</div>
+</div>
+</div> 
+    <br>
+    <br>
+    <br>
+    
+     <!-- Page content -->
+  <div class="container-fluid mt--6">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <!-- Card header -->
+          <div class="card-header border-0">
+            <h3 class="mb-0">BED ROOM</h3>
+          </div>
+          <!-- Light table -->
+          <div class="table-responsive">
+            <table class="table align-items-center table-flush">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col" class="sort" data-sort="name">DEVICE</th>
+                  <th scope="col" class="sort" data-sort="budget">TIME</th>
+                  <th scope="col" class="sort" data-sort="status">Status</th>
+                  <th scope="col" class="sort" data-sort="completion">last seen</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody class="list">
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" <div class="col-auto">
+                        <div class="icon icon-shape bg-GREEN text-blue rounded-circle shadow">
+                          <i class="fas fa-fan"></i>
+                        </div> 
+                        
+                        
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">FAN</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME">
+                    7:00
+                  </td>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox" id="togBtn">
+                      <div class="slider round">
+                       <!--ADDED HTML -->
+                       <span class="on">ON</span>
+                       <span class="off">OFF</span>
+                       <!--END-->
+                      </div>
+                     </label>
+                      <style>
+                     .switch {
+                      position: relative;
+                      display: inline-block;
+                      width: 80px;
+                      height: 34px;
+                    }
+                    
+                    .switch input {display:none;}
+                    
+                    .slider {
+                      position: absolute;
+                      cursor: pointer;
+                      top: 0;
+                      left: 0;
+                      right: 0;
+                      bottom: 0;
+                      background-color: gray;
+                      -webkit-transition: .4s;
+                      transition: .4s;
+                    }
+                    
+                    .slider:before {
+                      position: absolute;
+                      content: "";
+                      height: 26px;
+                      width: 26px;
+                      left: 3px;
+                      bottom: 4px;
+                      background-color: white;
+                      -webkit-transition: .4s;
+                      transition: .4s;
+                    }
+                    
+                    input:checked + .slider {
+                      background-color: #2986cc;
+                    }
+                    
+                    input:focus + .slider {
+                      box-shadow: 0 0 1px #2196F3;
+                    }
+                    
+                    input:checked + .slider:before {
+                      -webkit-transform: translateX(55px);
+                      -ms-transform: translateX(55px);
+                      transform: translateX(46px);
+                    }
+                    
+                    /*------ ADDED CSS ---------*/
+                    .on
+                    {
+                      display: none;
+                    }
+                    
+                    .on, .off
+                    {
+                      color: white;
+                      position: absolute;
+                      transform: translate(-50%,-50%);
+                      top: 50%;
+                      left: 50%;
+                      font-size: 10px;
+                      font-family: Verdana, sans-serif;
+                    }
+                    
+                    input:checked+ .slider .on
+                    {display: block;}
+                    
+                    input:checked + .slider .off
+                    {display: none;}
+                    
+                    /*--------- END --------*/
+                    
+                    /* Rounded sliders */
+                    .slider.round {
+                      border-radius: 34px;
+                    }
+                    
+                    .slider.round:before {
+                      border-radius: 50%;}
+                    </style> 
+                  </td>
+                <td class="time">
+                  <script>
+                    var i=0;
+                    var cont=document.getElementsByClassName("time")
+                    while(i<10){
+                      cont[i].innerHTML = "Failed to fetch time from Sinric Pro"
+                      i+=1;
+                    }
+                  
+                    function fetchTimeFromSinricPro() {
+                      const apiKey = '<API_KEY>';
+                      const deviceId = '<DEVICE_ID>';
+                      const url = `https://api.sinric.pro/v1/devices/${deviceId}/time`;
+                    
+                      const headers = {
+                        'Authorization': `apikey ${apiKey}`,
+                        'Content-Type': 'application/json'
+                      };
+                    
+                      return fetch(url, {
+                        headers: headers
+                      })
+                        .then(response => {
+                          if (!response.ok) {
+                            throw new Error('Failed to fetch time from Sinric Pro');
+                          }
+                          return response.json();
+                        })
+                        .then(data => {
+                          const currentTime = data.payload.time;
+                          // Display the current time on the website
+                          console.log('Current time:', currentTime);
+                        })
+                        .catch(error => {
+                          // Display "Failure" if there's an error fetching the time
+                          console.error('Error:', error);
+                          console.log('Failure');
+                        });
+                    }
+                    
+                    fetchTimeFromSinricPro();
+                    
+                  </script>
+                </td>
+                  
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#"<div class="col-auto">
+                        <div class="icon icon-shape bg-white text-green rounded-circle shadow">
+                          <i class="ni ni-bulb-61"></i>
+                        </div> 
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">LIGHT</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME">
+                  8:15
+                  </td>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox" id="togBtn">
+                      <div class="slider round">
+                       <!--ADDED HTML -->
+                       <span class="on">ON</span>
+                       <span class="off">OFF</span>
+                       <!--END-->
+                      </div>
+                     </label>
+                    
+                  </td>
+                
+                  <td class="time">
+                    <script>
+                      var i=0;
+                      var cont=document.getElementsByClassName("time")
+                      while(i<10){
+                        cont[i].innerHTML = "Failed to fetch time from Sinric Pro"
+                        i+=1;
+                      }
+                    
+                      function fetchTimeFromSinricPro() {
+                        const apiKey = '<API_KEY>';
+                        const deviceId = '<DEVICE_ID>';
+                        const url = `https://api.sinric.pro/v1/devices/${deviceId}/time`;
+                      
+                        const headers = {
+                          'Authorization': `apikey ${apiKey}`,
+                          'Content-Type': 'application/json'
+                        };
+                      
+                        return fetch(url, {
+                          headers: headers
+                        })
+                          .then(response => {
+                            if (!response.ok) {
+                              throw new Error('Failed to fetch time from Sinric Pro');
+                            }
+                            return response.json();
+                          })
+                          .then(data => {
+                            const currentTime = data.payload.time;
+                            // Display the current time on the website
+                            console.log('Current time:', currentTime);
+                          })
+                          .catch(error => {
+                            // Display "Failure" if there's an error fetching the time
+                            console.error('Error:', error);
+                            console.log('Failure');
+                          });
+                      }
+                      
+                      fetchTimeFromSinricPro();
+                      
+                    </script>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#"<div class="col-auto">
+                        <div class="icon icon-shape bg-white text-blue rounded-circle shadow">
+                          <i class="ni ni-bulb-61"></i>
+                        </div> 
+                        
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">LIGHT 2</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME">
+                    6:56
+                  </td>
+                    <td>
+                      <label class="switch">
+                        <input type="checkbox" id="togBtn">
+                        <div class="slider round">
+                         <!--ADDED HTML -->
+                         <span class="on">ON</span>
+                         <span class="off">OFF</span>
+                         <!--END-->
+                        </div>
+                       </label>
+                       
+                    </td>
+                    <td class="time">
+                      <script>
+                        var i=0;
+                        var cont=document.getElementsByClassName("time")
+                        while(i<10){
+                          cont[i].innerHTML = "Failed to fetch time from Sinric Pro"
+                          i+=1;
+                        }
+                      
+                        function fetchTimeFromSinricPro() {
+                          const apiKey = '<API_KEY>';
+                          const deviceId = '<DEVICE_ID>';
+                          const url = `https://api.sinric.pro/v1/devices/${deviceId}/time`;
+                        
+                          const headers = {
+                            'Authorization': `apikey ${apiKey}`,
+                            'Content-Type': 'application/json'
+                          };
+                        
+                          return fetch(url, {
+                            headers: headers
+                          })
+                            .then(response => {
+                              if (!response.ok) {
+                                throw new Error('Failed to fetch time from Sinric Pro');
+                              }
+                              return response.json();
+                            })
+                            .then(data => {
+                              const currentTime = data.payload.time;
+                              // Display the current time on the website
+                              console.log('Current time:', currentTime);
+                            })
+                            .catch(error => {
+                              // Display "Failure" if there's an error fetching the time
+                              console.error('Error:', error);
+                              console.log('Failure');
+                            });
+                        }
+                        
+                        fetchTimeFromSinricPro();
+                        
+                      </script>
+                    </td>
+
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#"
+                      <div class="col-auto">
+                        <div class="icon icon-shape bg-white text-danger rounded-circle shadow">
+                          <i class="ni ni-bulb-61"></i>
+                        </div>  
+                        
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">LIGHT 3</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME">
+                    4:56
+                  </td>
+                    <td>
+                      <label class="switch">
+                        <input type="checkbox" id="togBtn">
+                        <div class="slider round">
+                         <!--ADDED HTML -->
+                         <span class="on">ON</span>
+                         <span class="off">OFF</span>
+                         <!--END-->
+                        </div>
+                       </label>
+                      
+                    </td>
+                    <td class="time">
+                      <script>
+                        var i=0;
+                        var cont=document.getElementsByClassName("time")
+                        while(i<10){
+                          cont[i].innerHTML = "Failed to fetch time from Sinric Pro"
+                          i+=1;
+                        }
+                      
+                        function fetchTimeFromSinricPro() {
+                          const apiKey = '<API_KEY>';
+                          const deviceId = '<DEVICE_ID>';
+                          const url = `https://api.sinric.pro/v1/devices/${deviceId}/time`;
+                        
+                          const headers = {
+                            'Authorization': `apikey ${apiKey}`,
+                            'Content-Type': 'application/json'
+                          };
+                        
+                          return fetch(url, {
+                            headers: headers
+                          })
+                            .then(response => {
+                              if (!response.ok) {
+                                throw new Error('Failed to fetch time from Sinric Pro');
+                              }
+                              return response.json();
+                            })
+                            .then(data => {
+                              const currentTime = data.payload.time;
+                              // Display the current time on the website
+                              console.log('Current time:', currentTime);
+                            })
+                            .catch(error => {
+                              // Display "Failure" if there's an error fetching the time
+                              console.error('Error:', error);
+                              console.log('Failure');
+                            });
+                        }
+                        
+                        fetchTimeFromSinricPro();
+                        
+                      </script>
+                    </td>
+                
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#"<div class="col-auto">
+                        <div class="icon icon-shape bg-white text-purple rounded-circle shadow">
+                          <i class="fas fa-thermometer-half"></i>
+
+
+                        </div>  
+                        
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">AC</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME">
+                    7:45
+                  </td>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox" id="togBtn">
+                      <div class="slider round">
+                       <!--ADDED HTML -->
+                       <span class="on">ON</span>
+                       <span class="off">OFF</span>
+                       <!--END-->
+                      </div>
+                     </label>
+                     
+                  </td>
+                 <td class="time">
+                  <script>
+                    var i=0;
+                    var cont=document.getElementsByClassName("time")
+                    while(i<10){
+                      cont[i].innerHTML = "Failed to fetch time from Sinric Pro"
+                      i+=1;
+                    }
+                  
+                    function fetchTimeFromSinricPro() {
+                      const apiKey = '<API_KEY>';
+                      const deviceId = '<DEVICE_ID>';
+                      const url = `https://api.sinric.pro/v1/devices/${deviceId}/time`;
+                    
+                      const headers = {
+                        'Authorization': `apikey ${apiKey}`,
+                        'Content-Type': 'application/json'
+                      };
+                    
+                      return fetch(url, {
+                        headers: headers
+                      })
+                        .then(response => {
+                          if (!response.ok) {
+                            throw new Error('Failed to fetch time from Sinric Pro');
+                          }
+                          return response.json();
+                        })
+                        .then(data => {
+                          const currentTime = data.payload.time;
+                          // Display the current time on the website
+                          console.log('Current time:', currentTime);
+                        })
+                        .catch(error => {
+                          // Display "Failure" if there's an error fetching the time
+                          console.error('Error:', error);
+                          console.log('Failure');
+                        });
+                    }
+                    
+                    fetchTimeFromSinricPro();
+                    
+                  </script>
+                </td>
+                    
+            </tr>
+            <tr>
+              <th scope="row">
+                <div class="media align-items-center">
+                  <a href="#"<div class="col-auto">
+                    <div class="icon icon-shape bg-white text-yellow rounded-circle shadow">
+                      <i class="fas fa-tv"></i>
+
+
+
+                    </div>   
+                    
+                  </a>
+                  <div class="media-body">
+                    <span class="name mb-0 text-sm">TV</span>
+                  </div>
+                </div>
+              </th>
+              <td class="TIME">
+                7:10
+              </td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox" id="togBtn">
+                  <div class="slider round">
+                   <!--ADDED HTML -->
+                   <span class="on">ON</span>
+                   <span class="off">OFF</span>
+                   <!--END-->
+                  </div>
+                 </label>
+                 
+              </td>
+              <td class="time">
+                <script>
+                  var i=0;
+                  var cont=document.getElementsByClassName("time")
+                  while(i<10){
+                    cont[i].innerHTML = "Failed to fetch time from Sinric Pro"
+                    i+=1;
+                  }
+                
+                  function fetchTimeFromSinricPro() {
+                    const apiKey = '<API_KEY>';
+                    const deviceId = '<DEVICE_ID>';
+                    const url = `https://api.sinric.pro/v1/devices/${deviceId}/time`;
+                  
+                    const headers = {
+                      'Authorization': `apikey ${apiKey}`,
+                      'Content-Type': 'application/json'
+                    };
+                  
+                    return fetch(url, {
+                      headers: headers
+                    })
+                      .then(response => {
+                        if (!response.ok) {
+                          throw new Error('Failed to fetch time from Sinric Pro');
+                        }
+                        return response.json();
+                      })
+                      .then(data => {
+                        const currentTime = data.payload.time;
+                        // Display the current time on the website
+                        console.log('Current time:', currentTime);
+                      })
+                      .catch(error => {
+                        // Display "Failure" if there's an error fetching the time
+                        console.error('Error:', error);
+                        console.log('Failure');
+                      });
+                  }
+                  
+                  fetchTimeFromSinricPro();
+                  
+                </script>
+              </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <div class="media align-items-center">
+              <a href="#" <div class="col-auto">
+                <div class="icon icon-shape bg-white text-red rounded-circle shadow">
+                  <i class="fas fa-volume-up"></i>
+
+
+                </div>   
+                
+              </a>
+              <div class="media-body">
+                <span class="name mb-0 text-sm">SPEAKER</span>
+              </div>
+            </div>
+          </th>
+          <td class="TIME">
+            4:56
+          </td>
+          <td>
+            <label class="switch">
+              <input type="checkbox" id="togBtn">
+              <div class="slider round">
+               <!--ADDED HTML -->
+               <span class="on">ON</span>
+               <span class="off">OFF</span>
+               <!--END-->
+              </div>
+             </label>
+             
+          </td>
+          <td class="time">
+            <script>
+              var i=0;
+              var cont=document.getElementsByClassName("time")
+              while(i<10){
+                cont[i].innerHTML = "Failed to fetch time from Sinric Pro"
+                i+=1;
+              }
+            
+              function fetchTimeFromSinricPro() {
+                const apiKey = '<API_KEY>';
+                const deviceId = '<DEVICE_ID>';
+                const url = `https://api.sinric.pro/v1/devices/${deviceId}/time`;
+              
+                const headers = {
+                  'Authorization': `apikey ${apiKey}`,
+                  'Content-Type': 'application/json'
+                };
+              
+                return fetch(url, {
+                  headers: headers
+                })
+                  .then(response => {
+                    if (!response.ok) {
+                      throw new Error('Failed to fetch time from Sinric Pro');
+                    }
+                    return response.json();
+                  })
+                  .then(data => {
+                    const currentTime = data.payload.time;
+                    // Display the current time on the website
+                    console.log('Current time:', currentTime);
+                  })
+                  .catch(error => {
+                    // Display "Failure" if there's an error fetching the time
+                    console.error('Error:', error);
+                    console.log('Failure');
+                  });
+              }
+              
+              fetchTimeFromSinricPro();
+              
+            </script>
+          </td>
+            
+    </tr>
+    <tr>
+      <th scope="row">
+        <div class="media align-items-center">
+          <a href="#" <div class="col-auto">
+            <div class="icon icon-shape bg-white text-pink rounded-circle shadow">
+              <i class="fas fa-fire"></i>
+
+            </div>   
+             
+            
+          </a>
+          <div class="media-body">
+            <span class="name mb-0 text-sm">ROOM HEATER</span>
+          </div>
+        </div>
+      </th>
+      <td class="TIME">
+        6:11
+      </td>
+      <td>
+        <label class="switch">
+          <input type="checkbox" id="togBtn">
+          <div class="slider round">
+           <!--ADDED HTML -->
+           <span class="on">ON</span>
+           <span class="off">OFF</span>
+           <!--END-->
+          </div>
+         </label>
+        
+      </td>
+      <td class="time">
+        <script>
+          var i=0;
+          var cont=document.getElementsByClassName("time")
+          while(i<10){
+            cont[i].innerHTML = "Failed to fetch time from Sinric Pro"
+            i+=1;
+          }
+        
+          function fetchTimeFromSinricPro() {
+            const apiKey = '<API_KEY>';
+            const deviceId = '<DEVICE_ID>';
+            const url = `https://api.sinric.pro/v1/devices/${deviceId}/time`;
+          
+            const headers = {
+              'Authorization': `apikey ${apiKey}`,
+              'Content-Type': 'application/json'
+            };
+          
+            return fetch(url, {
+              headers: headers
+            })
+              .then(response => {
+                if (!response.ok) {
+                  throw new Error('Failed to fetch time from Sinric Pro');
+                }
+                return response.json();
+              })
+              .then(data => {
+                const currentTime = data.payload.time;
+                // Display the current time on the website
+                console.log('Current time:', currentTime);
+              })
+              .catch(error => {
+                // Display "Failure" if there's an error fetching the time
+                console.error('Error:', error);
+                console.log('Failure');
+              });
+          }
+          
+          fetchTimeFromSinricPro();
+          
+        </script>
+      </td>
+        
+</tr>
+<tr>
+  <th scope="row">
+    <div class="media align-items-center">
+      <a href="#"  <div class="col-auto">
+        <div class="icon icon-shape bg-white text-blue rounded-circle shadow">
+          <i class="fas fa-fan"></i>
+
+
+        </div>  
+        
+      </a>
+      <div class="media-body">
+        <span class="name mb-0 text-sm">FAN 2</span>
+      </div>
+    </div>
+  </th>
+  <td class="TIME">
+    4:56
+  </td>
+  <td>
+    <label class="switch">
+      <input type="checkbox" id="togBtn">
+      <div class="slider round">
+       <!--ADDED HTML -->
+       <span class="on">ON</span>
+       <span class="off">OFF</span>
+       <!--END-->
+      </div>
+     </label>
+     
+  </td>
+  <td class="time">
+    <script>
+      var i=0;
+      var cont=document.getElementsByClassName("time")
+      while(i<10){
+        cont[i].innerHTML = "Failed to fetch time from Sinric Pro"
+        i+=1;
+      }
+    
+      function fetchTimeFromSinricPro() {
+        const apiKey = '<API_KEY>';
+        const deviceId = '<DEVICE_ID>';
+        const url = `https://api.sinric.pro/v1/devices/${deviceId}/time`;
+      
+        const headers = {
+          'Authorization': `apikey ${apiKey}`,
+          'Content-Type': 'application/json'
+        };
+      
+        return fetch(url, {
+          headers: headers
+        })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Failed to fetch time from Sinric Pro');
+            }
+            return response.json();
+          })
+          .then(data => {
+            const currentTime = data.payload.time;
+            // Display the current time on the website
+            console.log('Current time:', currentTime);
+          })
+          .catch(error => {
+            // Display "Failure" if there's an error fetching the time
+            console.error('Error:', error);
+            console.log('Failure');
+          });
+      }
+      
+      fetchTimeFromSinricPro();
+      
+    </script>
+  </td>
+   
+</td>
+</tr>
+<tr>
+<th scope="row">
+<div class="media align-items-center">
+  <a href="#" <div class="col-auto">
+    <div class="icon icon-shape bg-white text-cyan rounded-circle shadow">
+      <i class="fas fa-lightbulb"></i>
+    </div> 
+    
+  </a>
+  <div class="media-body">
+    <span class="name mb-0 text-sm">LAMP</span>
+  </div>
+</div>
+</th>
+<td class="TIME">
+8:23
+</td>
+<td>
+  <label class="switch">
+    <input type="checkbox" id="togBtn">
+    <div class="slider round">
+     <!--ADDED HTML -->
+     <span class="on">ON</span>
+     <span class="off">OFF</span>
+     <!--END-->
+    </div>
+   </label>
+   
+</td>
+
+<td class="time">
+  <script>
+    var i=0;
+    var cont=document.getElementsByClassName("time")
+    while(i<10){
+      cont[i].innerHTML = "Failed to fetch time from Sinric Pro"
+      i+=1;
+    }
+  
+    function fetchTimeFromSinricPro() {
+      const apiKey = '<API_KEY>';
+      const deviceId = '<DEVICE_ID>';
+      const url = `https://api.sinric.pro/v1/devices/${deviceId}/time`;
+    
+      const headers = {
+        'Authorization': `apikey ${apiKey}`,
+        'Content-Type': 'application/json'
+      };
+    
+      return fetch(url, {
+        headers: headers
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Failed to fetch time from Sinric Pro');
+          }
+          return response.json();
+        })
+        .then(data => {
+          const currentTime = data.payload.time;
+          // Display the current time on the website
+          console.log('Current time:', currentTime);
+        })
+        .catch(error => {
+          // Display "Failure" if there's an error fetching the time
+          console.error('Error:', error);
+          console.log('Failure');
+        });
+    }
+    
+    fetchTimeFromSinricPro();
+    
+  </script>
+</td>
+
+</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+    
+      {% include "includes/footer.html" %}
+
+    </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+<script src="/static/assets/vendor/clipboard/dist/clipboard.min.js"></script>
+
+{% endblock javascripts %}

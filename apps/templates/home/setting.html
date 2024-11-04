@@ -1,0 +1,115 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} ROOMS {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-2">
+      <div class="container-fluid">
+        <div class="header-body"><!DOCTYPE html>
+<html>
+<head>
+  <title>SETTING</title>
+  <style>
+    /* Common styles */
+    h1 {
+      text-align: center;
+    }
+    
+    /* Styles for desktop */
+    @media only screen and (min-width: 768px) {
+      body {
+        max-width: 1500;
+        margin: 0 auto;
+      }
+      
+      .settings {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      
+      .setting-label {
+        width: 150px;
+      }
+      
+      .setting-control {
+        width: 300px;
+      }
+    }
+    
+    /* Styles for mobile */
+    @media only screen and (max-width: 767px) {
+      .settings {
+        margin-bottom: 10px;
+      }
+      
+      .setting-label,
+      .setting-control {
+        display: block;
+        width: 100%;
+
+      }
+      
+      .setting-label {
+        margin-bottom: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 div class="header bg-gradient-primary pb-8 pt-5 pt-md-4">Settings</h1>
+  
+  
+  <div class="settings">
+    <h6 class="h2 text-white d-inline-block mb-0">BRIGHTNESS</h6>
+    <input class="setting-control" type="range" id="brightness" min="0" max="100">
+  </div>
+  
+  <div class="settings">
+    <h6 class="h2 text-white d-inline-block mb-0">VOLUME</h6>
+    <input class="setting-control" type="range" id="volume" min="0" max="100">
+  </div>
+  
+  <div class="settings">
+    <h6 class="h2 text-white d-inline-block mb-0">NOTIFICATION</h6>
+    <select class="setting-control" id="notifications">
+      <option value="enabled">Enabled</option>
+      <option value="disabled">Disabled</option>
+    </select>
+  </div>
+  
+  <div class="settings">
+    <h6 class="h2 text-white d-inline-block mb-0">LANGUAGE</h6>
+    <select class="setting-control" id="language">
+      <option value="english">English</option>
+      <option value="spanish">Spanish</option>
+      <option value="french">French</option>
+    </select>
+  </div>
+  
+  <!-- Add more settings as needed -->
+</div>
+</div>
+</div>
+
+
+</body>
+</html>
+
+{% include "includes/footer.html" %}
+
+
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+<script src="/static/assets/vendor/clipboard/dist/clipboard.min.js"></script>
+
+{% endblock javascripts %}

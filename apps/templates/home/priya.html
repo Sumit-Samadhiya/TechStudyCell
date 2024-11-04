@@ -1,0 +1,213 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Dashboard {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+    <!--header-->
+    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-4">
+      <div class="container-fluid">
+        <div class="header-body">
+
+    <!-- Page content -->
+    <div class="col-lg-6 col-7">
+      <h4 class="h1 text-white d-inline-block mb-6">ENERGY</h4>
+      <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-3">
+        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+          <li class="breadcrumb-item"><a href="#"><i class="fas fa-lt"></i></li>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      
+          
+              <h1> <span id="temperature"></span></h1>
+          
+              <script>
+                  $(document).ready(function() {
+                      $.ajax({
+                          url: '/fetch-temperature/',
+                          dataType: 'json',
+                          success: function(data) {
+                              $('#temperature').text(data.ENERGY + '%');
+                          },
+                          error: function() {
+                              $('#temperature').text('Failed to detect energy');
+                          }
+                      });
+                  });
+              </script>
+          <li class="breadcrumb-item active" aria-current="page"></li>
+        </ol>
+      </nav>
+    </div>
+    <style>
+      
+      .slider {
+        position: relative;
+        width: 60px;
+        height: 34px;
+        left:100px;
+      }
+  
+      .slider input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+  
+      .slider .slider-round {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: 0.4s;
+        border-radius: 34px;
+      }
+  
+      .slider .slider-round:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+  
+      .slider input:checked + .slider-round {
+        background-color: #2196F3;
+      }
+  
+      .slider input:checked + .slider-round:before {
+        transform: translateX(26px);
+      }
+    </style>
+    <label for="energy" <h4 class="h2 text-white d-inline-block mb-6"> ENERGY SAVER:</label></h4>
+    <label class="slider">
+      <input type="checkbox">
+      <span class="slider-round"></span>
+    </label>
+  </form>
+  <style>
+    .container {
+      width: 0 auto;
+      margin: 0 auto;
+      padding: 20px;
+      right: px;
+
+      
+    }
+
+    .container h2 {
+      text-align: right;
+    }
+
+    .container input[type="text"],
+    .container input[type="text"] {
+      width: 80%;
+      padding: 10px;
+      margin-bottom: 10px;
+      right :100px;
+      
+    }
+
+    .container input[type="submit"] {
+      width: 30%;
+      padding: 10px;
+      background-color: blue;
+      color: white;
+     
+      cursor: pointer;
+    }
+
+    .container input[type="submit"]:hover {
+      
+    }
+  </style>
+  <br>
+  <div class="container">
+      <label for="device"><h4 class="h1 text-white d-inline-block mb-2"> Total connected devices</label></h4>
+      <div class="col-lg-6 col-7">
+        <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-3">
+          <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+            <li class="breadcrumb-item"><a href="#"><i class="fas fa-lt"></i></li>
+              <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
+            
+                <h1> <span id="device"></span></h1>
+            
+                <script>
+                    $(document).ready(function() {
+                        $.ajax({
+                            url: '/fetch-device/',
+                            dataType: 'json',
+                            success: function(data) {
+                                $('#device').text(data.ENERGY + '%');
+                            },
+                            error: function() {
+                                $('#device').text(' failed to fetch devices');
+                            }
+                        });
+                    });
+                </script>
+            <li class="breadcrumb-item active" aria-current="page"></li>
+          </ol>
+        </nav>
+      </div>
+      <br>
+     <h4 class="h2 text-black d-inline-block mb-4"> the energy the device consumes while turned off or,in standby mode</h4>
+     <br>
+      <label for="energy"><h4 class="h1 text-white d-inline-block mb-2">Total energy </label></h4>
+      <div class="col-lg-6 col-7">
+        <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-3">
+          <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+            <li class="breadcrumb-item"><a href="#"><i class="fas fa-lt"></i></li>
+              <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
+            
+                <h1> <span id="energy"></span></h1>
+            
+                <script>
+                    $(document).ready(function() {
+                        $.ajax({
+                            url: '/fetch-energy/',
+                            dataType: 'json',
+                            success: function(data) {
+                                $('#energy').text(data.ENERGY + '%');
+                            },
+                            error: function() {
+                                $('#energy').text('Failed to detect energy');
+                            }
+                        });
+                    });
+                </script>
+            <li class="breadcrumb-item active" aria-current="page"></li>
+          </ol>
+        </nav>
+      </div>
+      <br>
+      <h4 class="h2 text-black d-inline-block mb-4">the typical energy the device consume while turned on</h4>
+      <br>
+    </div>
+  </div>
+</div>
+</div>
+
+    
+    
+    {% include "includes/footer.html" %}
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+<script src="/static/assets/vendor/chart.js/dist/Chart.min.js"></script>
+<script src="/static/assets/vendor/chart.js/dist/Chart.extension.js"></script>
+
+{% endblock javascripts %}

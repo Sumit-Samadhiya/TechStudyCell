@@ -1,0 +1,429 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} ROOMS {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+          <div class="row">
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">TOTAL DEVICES</h5>
+                      <span class="h2 font-weight-bold mb-0">3</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-green text-green rounded-circle shadow">
+                        <i class="ni ni-spaceship text-red"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted text-sm">
+                    <span class="text-success mr-2"><i class="fa fa-arrow-"></i> </span>
+                    <span class="text-nowrap">IN HOUSE</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">ENERGY RELEASED</h5>
+                      <span class="h2 font-weight-bold mb-0">20%</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                        <i class="ni ni-chart-bar-32"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted text-sm">
+                    <span class="text-success mr-2"><i class="fas fa-arrow-up">45%</i></span>
+                    <span class="text-nowrap"></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- Page content -->
+  <div class="container-fluid mt--6">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <!-- Card header -->
+          <div class="card-header border-0">
+            <h3 class="mb-0">Store Room SCHEDULE</h3>
+          </div>
+          <!-- Light table -->
+          <div class="table-responsive">
+            <table class="table align-items-center table-flush ">
+              <thead class="thead-light ">
+                <tr>
+                  <th scope="col" class="sort" data-sort="name">DEVICE</th>
+                  <th scope="col" class="sort" data-sort="budget">START TIME</th>
+                  <th scope="col" class="sort" data-sort="status">Status</th>
+                  <th scope="col" class="sort" data-sort="completion">END TIME</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <style>
+                .rounded-input {
+                  border-radius: 30%;
+                  padding: 8px;
+                }
+               .list{
+                border-radius:50%;
+
+               }
+                .switch {
+                 position: relative;
+                 display: inline-block;
+                 width: 80px;
+                 height: 34px;
+               }              
+               .switch input {display:none;}    
+               .slider {
+                 position: absolute;
+                 cursor: pointer;
+                 top: 0;
+                 left: 0;
+                 right: 0;
+                 bottom: 0;
+                background-color: grey;
+                 -webkit-transition: .4s;
+                 transition: .4s;
+                 border:1px solid black;
+               }
+               .slider:before {
+                 position: absolute;
+                 content: "";
+                 height: 26px;
+                 width: 26px;
+                 left: 3px;
+                 bottom: 4px;
+                 background-color: #036CC7;
+            
+                 -webkit-transition: .4s;
+                 transition: .4s;
+               }
+               input:checked + .slider {
+                 background-color:  #036CC7;
+               }
+               input:focus + .slider {
+                box-shadow: 0 0 1px #2196F3;
+               }
+               input:checked + .slider:before {
+                 -webkit-transform: translateX(55px);
+                 -ms-transform: translateX(55px);
+                 transform: translateX(46px);
+               }
+               /*------ ADDED CSS ---------*/
+               .on{
+                 display: none;
+               }
+               .on, .off{
+                 color: white;
+                 position: absolute;
+                 transform: translate(-50%,-50%);
+                 top: 50%;
+                 left: 50%;
+                 font-size: 10px;
+                 font-family: Verdana, sans-serif;
+               }
+               input:checked+ .slider .on
+               {display: block;}
+               input:checked + .slider .off
+               {display: none;}
+               /*--------- END --------*/
+               /* Rounded sliders */
+               .slider.round {
+                 border-radius: 34px;
+               }
+               .slider.round:before {
+                 border-radius: 50%;}
+                 
+               </style>
+              <tbody class="list ">
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center  ">
+                      <a href="#" class="avatar rounded-circle mr-3 col-auto  ">
+                        <div class="icon icon-shape bg-white text-blue rounded-circle ">
+                        <i class="fas fa-fan"></i>
+                        </div>  
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">FAN</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME ">
+                    <input type="time" name="time" class= "rounded-input">
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <label class="switch">
+                        <input type="checkbox" id="togBtn">
+                        <div class="slider round">
+                         <!--ADDED HTML -->
+                         <span class="on">ON</span>
+                         <span class="off">OFF</span>
+                         <!--END-->
+                        </div>
+                       </label>
+                      <!--<i class="bg-red"></i>
+                      <span class="status">OFF</span>-->
+                    </span>
+                  </td>
+                  <td class="TIME">
+                    <input type="time" name="time" class="rounded-input">
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" class="avatar rounded-circle mr-3">
+                        <div class="icon icon-shape bg-white text-blue rounded-circle ">
+                        <i style='font-size:24px' class='fas'>&#xf0eb;</i>
+                        </div>
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">LIGHT 1</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME">
+                    <input type="time" name="time"class="rounded-input">
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <label class="switch">
+                        <input type="checkbox" id="togBtn">
+                        <div class="slider round">
+                         <!--ADDED HTML -->
+                         <span class="on">ON</span>
+                         <span class="off">OFF</span>
+                         <!--END-->
+                        </div>
+                       </label>
+                      <!--<i class="bg-danger"></i>
+                      <span class="status">OFF</span>-->
+                    </span>
+                  </td>
+  
+                  </td>
+                  <td class="TIME">
+                    <input type="time" name="time"class="rounded-input">
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" class="avatar rounded-circle mr-3">
+                        <div class="icon icon-shape bg-white text-blue rounded-circle ">
+                        <i style='font-size:24px' class='fas'>&#xf0eb;</i>
+                        </div>
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">LIGHT 2</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME">
+                    <input type="time" name="time"class="rounded-input">
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <label class="switch">
+                        <input type="checkbox" id="togBtn">
+                        <div class="slider round">
+                         <!--ADDED HTML -->
+                         <span class="on">ON</span>
+                         <span class="off">OFF</span>
+                         <!--END-->
+                        </div>
+                       </label>
+                      <!--<i class="bg-danger"></i>
+                      <span class="status">OFF</span>-->
+                    </span>
+                  </td>
+  
+                  </td>
+                  <td class="TIME">
+                    <input type="time" name="time"class="rounded-input">
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" class="avatar rounded-circle mr-3">
+                        <div class="icon icon-shape bg-white text-blue rounded-circle ">
+                          <i class="fas fa-camera"></i>
+                        </div>
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">CAMERA</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME">
+                    <input type="time" name="time"class="rounded-input">
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <label class="switch">
+                        <input type="checkbox" id="togBtn">
+                        <div class="slider round">
+                         <!--ADDED HTML -->
+                         <span class="on">ON</span>
+                         <span class="off">OFF</span>
+                         <!--END-->
+                        </div>
+                       </label>
+                      <!--<i class="bg-danger"></i>
+                      <span class="status">OFF</span>-->
+                    </span>
+                  </td>
+  
+                  </td>
+                  <td class="TIME">
+                    <input type="time" name="time"class="rounded-input">
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+
+
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" class="avatar rounded-circle mr-3">
+                        <div class="icon icon-shape bg-white text-blue rounded-circle ">
+                        <i class='far fa-dot-circle' style='font-size:20px'></i>
+                        </div>
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">SWITCH 2</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="TIME">
+                    <input type="time" name="time"class="rounded-input">
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <label class="switch">
+                        <input type="checkbox" id="togBtn">
+                        <div class="slider round">
+                         <!--ADDED HTML -->
+                         <span class="on">ON</span>
+                         <span class="off">OFF</span>
+                         <!--END-->
+                        </div>
+                       </label>
+                      <!--<i class="bg-info"></i>
+                      <span class="status">ON</span>-->
+                    </span>
+                  </td>
+                  
+                  <td class="TIME">
+                    <input type="time" name="time"class="rounded-input">
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Card footer -->
+          
+        </div>
+      </div>
+    </div>
+    
+      {% include "includes/footer.html" %}
+
+    </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+<script src="/static/assets/vendor/clipboard/dist/clipboard.min.js"></script>
+
+{% endblock javascripts %}
